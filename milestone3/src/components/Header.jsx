@@ -1,12 +1,12 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
-import ExitToAppIcon from "@material-ui/icons/ExitToApp"
-import IconButton from "@material-ui/core/IconButton"
+// import ExitToApp from "@bit/mui-org.material-ui-icons.exit-to-app";
+// import IconButton from "@material-ui/core/IconButton"
 import Typography from "@material-ui/core/Typography"
 
 const useStyles = makeStyles(
   (theme) => ({
-    headerContainer: {
+    headerContainer: { 
       display: "flex",
       backgroundColor: "#6681FF",
     },
@@ -32,9 +32,9 @@ const Header = (props) => {
         <Typography>DocuMed</Typography>
       </div>
       <div className={classes.exitButton}>
-        <IconButton>
-          <ExitToAppIcon />
-        </IconButton>
+        {/* <IconButton>
+          <ExitToApp />
+        </IconButton> */}
       </div>
     </div>
   )
