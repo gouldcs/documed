@@ -33,7 +33,7 @@ Adding Storybook is a straightforward process using yarn. Using cmd or terminal,
 
 After allowing yarn to add storyboook (it may take a moment) you can run `npm run storybook`. This will create a build of the current codebase and open storybook in your browser, hosted locally. As you write more code and save it, storybook will update accordingly.
 
-If your code contains errors, it may break the preview. Usually, as you fix errors, the preview will also fix itself. However, sometimes it requires you to restart storybook. You can do so by opening the terminal/cmd window where storybook is running, and press command+c (control+c on windows), then press 'y' to confirm exit. Then simply rerun the `npm run storybook` command.
+If your code contains errors, it may break the preview. Usually, as you fix errors, the preview will also fix itself. However, sometimes it requires you to restart storybook. You can do so by opening the terminal/cmd window where storybook is running, and press control+c, then press 'y' to confirm exit. Then simply rerun the `npm run storybook` command.
 
 ## Possible problems
 
