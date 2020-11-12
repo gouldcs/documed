@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Quickstart guide
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## MacOS Important Note
 
-## Available Scripts
+Currently, Homebrew is not supported on MacOS Big Sur as of November 12th, 2020. Not all commands will work if you are on Big Sur.
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+## Install Node.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can install Node.js on your **Mac** device by opening Terminal and entering: `$ brew install node`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+If on **Windows**, open CMD and use Chocolatey: `cinst nodejs.install`
 
-### `yarn test`
+Alternatively, you can download Node.js from a pre-built installer via the [Node.js download page](https://nodejs.org/en/download/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+## Install Yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can install yarn on your **Mac** device by opening terminal and entering `$ brew install yarn`. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If on **Windows**, open CMD and use Chocolatey: `choco install yarn` or Scoop: `scoop install yarn`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you would like alternative installation options for either OS, you can visit the installation page [here](https://classic.yarnpkg.com/en/docs/install/#windows-stable).
 
-### `yarn eject`
+---
+## Adding Storybook
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Storybook is a useful tool that allows you to preview the construction of front-end components before adding them to the final product. It is something that we use throughout our design process regularly, so it's important to get it working.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Adding Storybook is a straightforward process using yarn. Using cmd or terminal, navigate to `../documed/milestone3` and run the following command: `yarn add storybook`. this will now allow you to run storybook.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+After allowing yarn to add storyboook (it may take a moment) you can run `npm run storybook`. This will create a build of the current codebase and open storybook in your browser, hosted locally. As you write more code and save it, storybook will update accordingly.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If your code contains errors, it may break the preview. Usually, as you fix errors, the preview will also fix itself. However, sometimes it requires you to restart storybook. You can do so by opening the terminal/cmd window where storybook is running, and press command+c (control+c on windows), then press 'y' to confirm exit. Then simply rerun the `npm run storybook` command.
 
-## Learn More
+## Possible problems
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+We've experienced some issues in the past with Storybook regarding some MaterialUI components that needed to be loaded in separately. Here are some commands you might have to run before storybook will run properly:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`yarn add @material-ui/core`
 
-### Code Splitting
+`yarn add @material-ui/icons`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
