@@ -1,22 +1,27 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
-// import ExitToApp from "@bit/mui-org.material-ui-icons.exit-to-app";
-// import IconButton from "@material-ui/core/IconButton"
+import ExitToAppIcon from "@material-ui/icons/ExitToApp"
+import Grid from "@material-ui/core/Grid"
+import IconButton from "@material-ui/core/IconButton"
+import Paper from "@material-ui/core/Paper"
 import Typography from "@material-ui/core/Typography"
 
 const useStyles = makeStyles(
   (theme) => ({
-    headerContainer: { 
+    headerContainer: {
       display: "flex",
       backgroundColor: "#6681FF",
+      //justifyContent: "center",
     },
 
     title: {
+      display: "flex",
       color: "white",
-      justifyContent: "center",
+      float: "right",
     },
 
     exitButton: {
+      display: "flex",
       float: "right",
     },
   }),
@@ -28,14 +33,20 @@ const Header = (props) => {
 
   return (
     <div className={classes.headerContainer}>
-      <div className={classes.title}>
-        <Typography>DocuMed</Typography>
-      </div>
-      <div className={classes.exitButton}>
-        {/* <IconButton>
-          <ExitToApp />
-        </IconButton> */}
-      </div>
+      <Grid container>
+        <Grid item xs={7}>
+          <div className={classes.title}>
+            <Typography variant="h4">DocuMed</Typography>
+          </div>
+        </Grid>
+        <Grid item xs={5}>
+          <div className={classes.exitButton}>
+            <IconButton>
+              <ExitToAppIcon />
+            </IconButton>
+          </div>
+        </Grid>
+      </Grid>
     </div>
   )
 }
