@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from "./Header"
 import { makeStyles } from '@material-ui/core/styles'
 import MenuList from '@material-ui/core/MenuList';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -8,12 +9,14 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(
     (theme) => ({
+
         defaultSetup: {
-            minHeight: 719,
-            minWidth: 351,
-            maxHeight: 719,
-            maxWidth: 351,
-            paddingTop: 128,
+            minHeight: 720,
+            minWidth: 280,
+            maxHeight: 720,
+            maxWidth: 280,
+            paddingTop: 20,
+            paddingRight: 10,
             display: 'flex',
             flexDirection: 'row',
         },
@@ -30,34 +33,10 @@ const useStyles = makeStyles(
 
         navItem: {
             fontSize: 24,
+            fontWeight: "regular",
             paddingTop: 24,
             paddingBottom: 24,
         },
-
-        mainPanel: {
-            minHeight: 719,
-            minWidth: 1080,
-            maxHeight: 720,
-            maxWidth: 351,
-            display: 'flex',
-            flexDirection: 'column',
-        },
-
-        mainPanelContents: {
-            flex: 1,
-            display: "flex",
-            flexDirection: "column",
-        },
-
-        welcomeMessage: {
-            fontWeight: "bold",
-            paddingTop: 36,
-        },
-
-        patientName: {
-            fontWeight: "thin",
-            paddingTop: 12,
-        }
 }))
 
 const ActionPanel = (props) => {
@@ -76,18 +55,6 @@ const ActionPanel = (props) => {
                 </MenuList>
             </Paper>  
         </div>
-        <div className={classes.mainPanel}>
-            <Paper className={classes.paper}>
-                <div className={classes.mainPanelContents}>
-                    <Typography variant="h5" gutterBottom className={classes.welcomeMessage}>
-                        Welcome to your DocuMed Dashboard,
-                    </Typography>
-                    <Typography variant="h2" gutterBottom className={classes.patientName}>
-                        Raytheon Tole
-                    </Typography>
-                </div>                
-            </Paper>  
-        </div>          
     </div>
   )
 }
