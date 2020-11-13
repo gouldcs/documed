@@ -7,20 +7,23 @@ const useStyles = makeStyles(
     (theme) => ({
 
         defaultLayout: {
-            paddingTop: 20,
+            display: 'flex',
+            flexDirection: 'column',
         },
 
         paper: {
             flex: 1,
             display: 'flex',
             padding: '12px 40px 12px',
+            background: '#F8F8F8',
+            borderRadius: 20,
         },
 
         mainPanel: {
             minHeight: 600,
-            minWidth: 800,
+            minWidth: 900,
             maxHeight: 600,
-            maxWidth: 800,
+            maxWidth: 900,
             display: 'flex',
             flexDirection: 'column',
         },
@@ -33,7 +36,9 @@ const ContentPanel = (props) => {
   return (
     <div className={classes.defaultLayout}>
         <div className={classes.mainPanel}>
-            <Paper className={classes.paper}>               
+            <Paper className={classes.paper} elevation={3}>     
+                <div className={classes.panelContents}>
+                </div>   
             </Paper>  
         </div>
     </div>          

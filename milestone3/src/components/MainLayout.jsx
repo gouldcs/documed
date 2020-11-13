@@ -1,45 +1,57 @@
-import React from "react"
+import React from 'react'
 import MenuPanel from "./MenuPanel"
 import ContentPanel from "./ContentPanel"
 import Header from "./Header"
-import { makeStyles } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
+import { makeStyles } from '@material-ui/core/styles'
+import PageName from './PageName'
+import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles((theme) => ({
-  pageLayout: {
-    display: "flex",
-    flexDirection: "column",
-  },
+const useStyles = makeStyles(
+    (theme) => ({
+        pageLayout: {
+            display: 'flex',
+            flexDirection: 'column',
+            background:'#FFFFFF',
+        },
 
-  mainContent: {
-    display: "flex",
-    flexDirection: "row",
-  },
+        mainContentContainer: {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+        },
 
-  mainPanel: {
-    minHeight: 719,
-    minWidth: 1080,
-    maxHeight: 720,
-    maxWidth: 351,
-    display: "flex",
-    flexDirection: "column",
-  },
+        mainContent: {
+            display: 'flex',
+            flexDirection: 'row',
+            paddingTop: 10,
+        },
 
-  mainPanelContents: {
-    flex: 1,
-    display: "flex",
-    flexDirection: "column",
-  },
+        pageNameContainer: {
+            paddingTop: 40,
+            paddingLeft: 400,
+        },
 
-  welcomeMessage: {
-    fontWeight: "bold",
-    paddingTop: 36,
-  },
+        mainPanelContents: {
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+        },
 
-  patientName: {
-    fontWeight: "thin",
-    paddingTop: 12,
-  },
+        mainPanelContents: {
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+        },
+
+        welcomeMessage: {
+            fontWeight: 'bold',
+            paddingTop: 36,
+        },
+
+        patientName: {
+            fontWeight: 'thin',
+            paddingTop: 12,
+        }
 }))
 
 const MainLayout = (props) => {
@@ -47,28 +59,25 @@ const MainLayout = (props) => {
 
   return (
     <div className={classes.pageLayout}>
-      <Header />
-      <div className={classes.mainContent}>
-        <MenuPanel />
-        <ContentPanel>
-          <div className={classes.mainPanelContents}>
-            <Typography
-              variant="h5"
-              gutterBottom
-              className={classes.welcomeMessage}
-            >
-              Welcome to your DocuMed Dashboard,
-            </Typography>
-            <Typography
-              variant="h2"
-              gutterBottom
-              className={classes.patientName}
-            >
-              Raytheon Tole
-            </Typography>
-          </div>
-        </ContentPanel>
-      </div>
+        <Header></Header>
+        <div className={classes.pageNameContainer}>
+            <PageName></PageName>
+        </div>
+        <div className={classes.mainContentContainer}>
+            <div className={classes.mainContent}>
+                <MenuPanel></MenuPanel>
+                    <ContentPanel>
+                        <div className={classes.mainPanelContents}>
+                            <Typography variant="h5" gutterBottom className={classes.welcomeMessage}>
+                                Welcome to your DocuMed Dashboard,
+                            </Typography>
+                            <Typography variant="h2" gutterBottom className={classes.patientName}>
+                                Raytheon Tole
+                            </Typography>
+                        </div>  
+                    </ContentPanel>
+            </div>
+        </div>
     </div>
   )
 }
