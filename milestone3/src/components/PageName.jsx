@@ -9,7 +9,7 @@ const useStyles = makeStyles(
         pageName: {
             fontWeight: "bold",
             fontSize: 24,
-            color: '#FFFFFF',
+            color: '#000000',
         },
 }))
 
