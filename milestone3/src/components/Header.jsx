@@ -23,7 +23,7 @@ const useStyles = makeStyles(
       flexGrow: 1,
       fontWeight: "bold",
       alignSelf: 'center',
-      color: '#FFFFFF',
+      color: '#2383ef',
       paddingTop: 40,
       paddingBottom: 40,
     },
@@ -37,7 +37,7 @@ const Header = (props) => {
   return (
     <div className={classes.root}>
       <AppBar position="static" style={{alignItems:'center',
-                                        background:'#1F5780'}}>
+                                        background:'#232323'}}>
         <Toolbar variant="regular">
           <Typography variant="h2" className={classes.title}>
             DocuMed

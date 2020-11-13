@@ -15,7 +15,7 @@ const useStyles = makeStyles(
             flex: 1,
             display: 'flex',
             padding: '12px 40px 12px',
-            background: '#F8F8F8',
+            background: '#232323',
             borderRadius: 20,
         },
 

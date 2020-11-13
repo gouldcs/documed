@@ -11,7 +11,7 @@ const useStyles = makeStyles(
         pageLayout: {
             display: 'flex',
             flexDirection: 'column',
-            background:'#FFFFFF',
+            background:'#111111',
         },
 
         mainContentContainer: {

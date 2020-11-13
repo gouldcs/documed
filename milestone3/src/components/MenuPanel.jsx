@@ -23,7 +23,7 @@ const useStyles = makeStyles(
             borderRadius: 20,
             display: 'flex',
             padding: '12px 40px 12px',
-            background: "#F8F8F8",
+            background: "#232323",
         },
 
         menuPanel: {
@@ -33,7 +33,7 @@ const useStyles = makeStyles(
         navItem: {
             fontSize: 18,
             fontWeight: "regular",
-            color: '#000000',
+            color: '#FFFFFF',
             paddingTop: 30,
             paddingBottom: 30,
         },
