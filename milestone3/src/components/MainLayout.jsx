@@ -58,23 +58,23 @@ const MainLayout = (props) => {
   const classes = useStyles(props)
 
   return (
-    <div className={classes.pageLayout}>
-        <Header></Header>
-        <div className={classes.pageNameContainer}>
-            <PageName></PageName>
-        </div>
-        <div className={classes.mainContentContainer}>
-            <div className={classes.mainContent}>
-                <MenuPanel></MenuPanel>
-                    <ContentPanel>
-                        <div className={classes.mainPanelContents}>
-                            <Typography variant="h5" gutterBottom className={classes.welcomeMessage}>
-                                Welcome to your DocuMed Dashboard,
-                            </Typography>
-                            <Typography variant="h2" gutterBottom className={classes.patientName}>
-                                Raytheon Tole
-                            </Typography>
-                        </div>  
+  <div className={classes.pageLayout}>
+    <Header></Header>
+    <div className={classes.pageNameContainer}>
+      <PageName></PageName>
+    </div>
+      <div className={classes.mainContentContainer}>
+        <div className={classes.mainContent}>
+            <MenuPanel></MenuPanel>
+            <ContentPanel>
+              <div className={classes.mainPanelContents}>
+                <Typography variant="h5" gutterBottom className={classes.welcomeMessage}>
+                  Welcome to your DocuMed Dashboard,
+                </Typography>
+                <Typography variant="h2" gutterBottom className={classes.patientName}>
+                  Raytheon Tole
+                </Typography>
+            </div>  
                     </ContentPanel>
             </div>
         </div>
