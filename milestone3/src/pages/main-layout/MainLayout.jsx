@@ -5,7 +5,7 @@ import Paper from "@material-ui/core/Paper"
 
 import Header from "../../components/Header"
 import MenuPanel from "../../components/MenuPanel"
-import UploadPage from "../upload/UploadPage"
+import UploadPage from "./contact/ContactTemplate"
 import { Typography } from "@material-ui/core"
 
 const useStyles = makeStyles((theme) => ({
@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     display: "flex",
     flex: 5,
+    padding: 8,
   },
 
   content: {
@@ -62,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const Dashboard = (props) => {
+const MainLayout = (props) => {
   const classes = useStyles(props)
 
   return (
@@ -71,9 +72,9 @@ const Dashboard = (props) => {
         <Header />
       </div>
       <div className={classes.pageTitle}>
-        <div className={classes.emptyForNow}></div>
+        <div className={classes.emptyForNow} />
         <div className={classes.title}>
-          <Typography>Page Title</Typography>
+          <Typography variant="h5">Page Title</Typography>
         </div>
       </div>
       <div className={classes.content}>
@@ -90,4 +91,4 @@ const Dashboard = (props) => {
   )
 }
 
-export default Dashboard
+export default MainLayout

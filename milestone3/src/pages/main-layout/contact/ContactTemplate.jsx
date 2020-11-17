@@ -1,6 +1,7 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
+import Button from "@material-ui/core/Button"
 import FormControl from "@material-ui/core/FormControl"
 import InputLabel from "@material-ui/core/InputLabel"
 import MenuItem from "@material-ui/core/MenuItem"
@@ -29,9 +30,18 @@ const useStyles = makeStyles((theme) => ({
   formControl: {
     minWidth: 120,
   },
+
+  upload: {
+    outline: 2,
+  },
+
+  button: {
+    display: "flex",
+    flexDirection: "row-reverse",
+  },
 }))
 
-const UploadPage = (props) => {
+const ContactTemplate = (props) => {
   const classes = useStyles(props)
 
   return (
@@ -50,9 +60,12 @@ const UploadPage = (props) => {
           </FormControl>
         </div>
       </div>
-      <div>Upload goes here</div>
+      <div className={classes.upload}>Upload goes here</div>
+      <div className={classes.button}>
+        <Button>Send</Button>
+      </div>
     </div>
   )
 }
 
-export default UploadPage
+export default ContactTemplate
