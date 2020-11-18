@@ -60,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
 
   paper: {
     background: "#F8F8F8",
+    marginRight: 20,
   },
 }))
 

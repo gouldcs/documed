@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
   select: {
     display: "flex",
     flex: 1,
+    flexDirection: "row",
   },
 
   toLabel: {
@@ -24,14 +25,15 @@ const useStyles = makeStyles((theme) => ({
   },
 
   selectElement: {
+    display: "flex",
     flex: 14,
   },
 
   formControl: {
-    minWidth: 120,
+    width: "20%",
   },
 
-  upload: {
+  message: {
     outline: 2,
   },
 
@@ -52,15 +54,23 @@ const ContactTemplate = (props) => {
         </div>
         <div className={classes.selectElement}>
           <FormControl className={classes.formControl}>
-            <InputLabel>Select Doctor</InputLabel>
-            <Select className={classes.select}>
-              <MenuItem value={"Comfortable"}>Dr. Toal</MenuItem>
-              <MenuItem value={"Cozy"}>Dr. Forney</MenuItem>
+            <Select
+              defaultValue=""
+              // variant="outlined"
+              className={classes.select}
+            >
+              <MenuItem value={""} disabled>
+                Select Doctor
+              </MenuItem>
+              <MenuItem value={"Dr. Toal"}>Dr. Toal</MenuItem>
+              <MenuItem value={"Dr. Forney"}>Dr. Forney</MenuItem>
             </Select>
           </FormControl>
         </div>
       </div>
-      <div className={classes.upload}>Upload goes here</div>
+      <div className={classes.message}>
+        Text goes here (also add doc attachment feature)
+      </div>
       <div className={classes.button}>
         <Button>Send</Button>
       </div>
