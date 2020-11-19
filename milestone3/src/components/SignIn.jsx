@@ -1,7 +1,5 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import MenuList from '@material-ui/core/MenuList';
-import MenuItem from '@material-ui/core/MenuItem';
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
@@ -31,14 +29,16 @@ const useStyles = makeStyles(
         },
 
         contentContainer: {
-            maxWidth: 600,
-            minWidth: 600,
+            display: 'flex',
+            flexDirection: 'column',
+            width: '80%',
             alignSelf: 'center',
             alignContent: 'center',
         },
 
         heading: {
             display: 'flex',
+            margin: 'auto',
             marginTop: 40,
             marginBottom: 20,
         },
@@ -68,7 +68,8 @@ const useStyles = makeStyles(
 
         callToAction: {
             display: 'flex',
-            margin: 'auto',
+            alignContent: 'center',
+            justifySelf: 'center',
         },
 
         signUp: {
@@ -88,61 +89,64 @@ const SignIn = (props) => {
     return (
         <div className={classes.defaultSetup}>
             <Paper className={classes.paper}>
-                <div className={classes.heading}>
-                    <Typography variant='h4'>
-                        Sign in to your DocuMed account
-                    </Typography>
-                </div>
-                <div className={classes.inputFields}>
-                    <Typography variant='h6'>
-                        Email
-                    </Typography>
-                </div>
-                <div className={classes.inputFields}>
-                    <TextField id="email" variant="filled" fullWidth>
-                    </TextField>
-                </div>
-                <div className={classes.inputFields}>
-                    <Typography variant='h6'>
-                        Password
-                    </Typography>
-                </div>
-                <div className={classes.inputFields}>
-                    <TextField id="password" variant="filled" fullWidth>
-                    </TextField>
-                </div>
-                <div className={classes.inputFields}>
-                    <Typography variant='subtitle2' style={{fontWeight: 'bold'}}>
-                        <Link href="#">
-                        Forgot password? Click here
-                        </Link>
-                    </Typography>
-                </div>
-                <div className={classes.buttonDiv}>
-                    <Button variant="contained"
-                    style={{
-                        width:400,
-                        height: 50,
-                        backgroundColor:"#6681ff",
-                        textTransform: "none",
-                        color: 'white'
-                    }}>
-                        <Typography variant = 'h6'>
-                            Sign In
+                <div className={classes.contentContainer}>
+                    <div className={classes.heading}>
+                        <Typography variant='h4'>
+                            Sign in to your DocuMed account
                         </Typography>
-                    </Button>
-                </div>
-                <div className={classes.centered}>
-                    <Typography variant='h6'>
-                        Don't have an account?
-                    </Typography>
-                </div>
-                <div className={classes.signUp}>
-                    <Typography variant='subtitle1' style={{fontWeight: 'bold'}}>
-                        <Link href='#'>
-                            Sign up here!
-                        </Link>
-                    </Typography>
+                    </div>
+                    <div className={classes.inputFields}>
+                        <Typography variant='h6'>
+                            Email
+                        </Typography>
+                    </div>
+                    <div className={classes.inputFields}>
+                        <TextField id="email" variant="filled" fullWidth>
+                        </TextField>
+                    </div>
+                    <div className={classes.inputFields}>
+                        <Typography variant='h6'>
+                            Password
+                        </Typography>
+                    </div>
+                    <div className={classes.inputFields}>
+                        <TextField id="password" variant="filled" fullWidth>
+                        </TextField>
+                    </div>
+                    <div className={classes.inputFields}>
+                        <Typography variant='subtitle2' style={{fontWeight: 'bold'}}>
+                            <Link href="#">
+                            Forgot password? Click here
+                            </Link>
+                        </Typography>
+                    </div>
+                    <div className={classes.buttonDiv}>
+                        <Button variant="contained"
+                        style={{
+                            width:400,
+                            margin: 'auto',
+                            height: 50,
+                            backgroundColor:"#6681ff",
+                            textTransform: "none",
+                            color: 'white'
+                        }}>
+                            <Typography variant = 'h6'>
+                                Sign In
+                            </Typography>
+                        </Button>
+                    </div>
+                    <div className={classes.callToAction}>
+                        <Typography variant='h6' style={{margin: 'auto',}}>
+                            Don't have an account?
+                        </Typography>
+                    </div>
+                    <div className={classes.signUp}>
+                        <Typography variant='subtitle1' style={{fontWeight: 'bold'}}>
+                            <Link href='#'>
+                                Sign up here!
+                            </Link>
+                        </Typography>
+                    </div>
                 </div>
             </Paper>
 

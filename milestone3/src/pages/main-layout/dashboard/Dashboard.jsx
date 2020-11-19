@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   tableContainer: {
-    maxWidth: 500,
+    width: '90%',
     paddingTop: 50,
   },
 }))
