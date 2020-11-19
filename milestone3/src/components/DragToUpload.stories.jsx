@@ -2,7 +2,7 @@ import React from "react"
 import DragToUpload from "./DragToUpload"
 
 export default {
-  title: "pages/dashboard/DragToUpload",
+  title: "pages/main-layout/DragToUpload",
 }
 
 export const basic = () => <DragToUpload />

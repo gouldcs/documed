@@ -1,6 +1,7 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
+import Button from "@material-ui/core/Button"
 import FormControl from "@material-ui/core/FormControl"
 import InputLabel from "@material-ui/core/InputLabel"
 import MenuItem from "@material-ui/core/MenuItem"
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
   select: {
     display: "flex",
     flex: 1,
+    flexDirection: "row",
   },
 
   toLabel: {
@@ -23,15 +25,25 @@ const useStyles = makeStyles((theme) => ({
   },
 
   selectElement: {
+    display: "flex",
     flex: 14,
   },
 
   formControl: {
-    minWidth: 120,
+    width: "20%",
+  },
+
+  message: {
+    outline: 2,
+  },
+
+  button: {
+    display: "flex",
+    flexDirection: "row-reverse",
   },
 }))
 
-const UploadPage = (props) => {
+const ContactTemplate = (props) => {
   const classes = useStyles(props)
 
   return (
@@ -42,17 +54,28 @@ const UploadPage = (props) => {
         </div>
         <div className={classes.selectElement}>
           <FormControl className={classes.formControl}>
-            <InputLabel>Select Doctor</InputLabel>
-            <Select className={classes.select}>
-              <MenuItem value={"Comfortable"}>Dr. Toal</MenuItem>
-              <MenuItem value={"Cozy"}>Dr. Forney</MenuItem>
+            <Select
+              defaultValue=""
+              // variant="outlined"
+              className={classes.select}
+            >
+              <MenuItem value={""} disabled>
+                Select Doctor
+              </MenuItem>
+              <MenuItem value={"Dr. Toal"}>Dr. Toal</MenuItem>
+              <MenuItem value={"Dr. Forney"}>Dr. Forney</MenuItem>
             </Select>
           </FormControl>
         </div>
       </div>
-      <div>Upload goes here</div>
+      <div className={classes.message}>
+        Text goes here (also add doc attachment feature)
+      </div>
+      <div className={classes.button}>
+        <Button>Send</Button>
+      </div>
     </div>
   )
 }
 
-export default UploadPage
+export default ContactTemplate

@@ -5,7 +5,8 @@ import Paper from "@material-ui/core/Paper"
 
 import Header from "../../components/Header"
 import MenuPanel from "../../components/MenuPanel"
-import UploadPage from "../upload/UploadPage"
+import UploadPage from "./contact/ContactTemplate"
+import Dashboard from "./dashboard/Dashboard"
 import { Typography } from "@material-ui/core"
 
 const useStyles = makeStyles((theme) => ({
@@ -37,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     display: "flex",
     flex: 5,
+    padding: 12,
+    paddingTop: 20,
+    paddingLeft: 55,
   },
 
   content: {
@@ -59,10 +63,11 @@ const useStyles = makeStyles((theme) => ({
 
   paper: {
     background: "#F8F8F8",
+    borderRadius: 20,
   },
 }))
 
-const Dashboard = (props) => {
+const MainLayout = (props) => {
   const classes = useStyles(props)
 
   return (
@@ -71,9 +76,9 @@ const Dashboard = (props) => {
         <Header />
       </div>
       <div className={classes.pageTitle}>
-        <div className={classes.emptyForNow}></div>
+        <div className={classes.emptyForNow} />
         <div className={classes.title}>
-          <Typography>Page Title</Typography>
+          <Typography variant="h5">Dashboard</Typography>
         </div>
       </div>
       <div className={classes.content}>
@@ -82,7 +87,7 @@ const Dashboard = (props) => {
         </div>
         <div className={classes.pageContent}>
           <Paper className={classes.paper}>
-            <UploadPage />
+            <Dashboard />
           </Paper>
         </div>
       </div>
@@ -90,4 +95,4 @@ const Dashboard = (props) => {
   )
 }
 
-export default Dashboard
+export default MainLayout
