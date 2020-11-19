@@ -1,39 +1,46 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import DocuMedDescription from "../../components/DocuMedDescription";
-import SignUpComponent from "../../components/SignUpComponent";
+import DocuMedDescription from "./signup-components/DocuMedDescription";
+import SignUpComponent from "./signup-components/SignUpComponent";
 import Header from "../../components/Header";
 
 const useStyles = makeStyles(
     (theme) => ({
+        signUpContent: {
+            display: "flex",
+            flexDirection: "column",
+        },
+
         default: {
             display: 'flex',
             flexDirection: 'row',
-            margin: 'auto',
             justifyContent: 'center',
-            marginTop: 55
+            paddingTop: 50,
+            //marginTop: 55
         },
 
         description: {
             display: 'flex',
-            paddingRight: 150,
+            paddingRight: 50,
             paddingTop: 130,
-            paddingBottom: 30,
+            //paddingBottom: 30,
             justifyContent: 'center'
-        }
-    })
+        },
+    }), { name: "SignUp" }
 )
 
 const SignUp = (props) => {
     const classes = useStyles();
     return (
-        <div>
-            <Header/>
+        <div className={classes.signUpContent}>
+            <Header text="Welcome to DocuMed" />
             <div className={classes.default}>
                 <div className={classes.description}>
-                    <DocuMedDescription/>
+                    <DocuMedDescription />
                 </div>
-                <SignUpComponent/>
+                <div className={classes.signup}>
+                    <SignUpComponent />
+                </div>
             </div>
         </div>
     )

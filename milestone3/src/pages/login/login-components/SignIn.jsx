@@ -9,7 +9,7 @@ import Link from '@material-ui/core/Link';
 const useStyles = makeStyles(
     (theme) => ({
         defaultSetup: {
-            paddingTop: 120,
+            paddingTop: 50,
             display: "flex",
             flexDirection: "row",
         },
@@ -17,10 +17,10 @@ const useStyles = makeStyles(
         paper: {
             maxWidth: 700,
             minHeight: 400,
-            flex: 4,
+            //flex: 4,
             elevation: 3,
             display: 'flex',
-            flexDirection:'column',
+            flexDirection: 'column',
             alignContent: 'center',
             margin: 'auto',
             borderRadius: 20,
@@ -44,7 +44,7 @@ const useStyles = makeStyles(
         },
 
         buttonDiv: {
-            display:'flex',
+            display: 'flex',
             marginTop: 20,
             marginBottom: 15
         },
@@ -73,13 +73,13 @@ const useStyles = makeStyles(
         },
 
         signUp: {
-            display:'flex',
+            display: 'flex',
             margin: 'auto',
             marginBottom: 40,
         }
 
 
-}))
+    }))
 
 
 
@@ -114,34 +114,34 @@ const SignIn = (props) => {
                         </TextField>
                     </div>
                     <div className={classes.inputFields}>
-                        <Typography variant='subtitle2' style={{fontWeight: 'bold'}}>
+                        <Typography variant='subtitle2' style={{ fontWeight: 'bold' }}>
                             <Link href="#">
-                            Forgot password? Click here
+                                Forgot password? Click here
                             </Link>
                         </Typography>
                     </div>
                     <div className={classes.buttonDiv}>
                         <Button variant="contained"
-                        style={{
-                            width:400,
-                            margin: 'auto',
-                            height: 50,
-                            backgroundColor:"#6681ff",
-                            textTransform: "none",
-                            color: 'white'
-                        }}>
-                            <Typography variant = 'h6'>
+                            style={{
+                                width: 400,
+                                margin: 'auto',
+                                height: 50,
+                                backgroundColor: "#6681ff",
+                                textTransform: "none",
+                                color: 'white'
+                            }}>
+                            <Typography variant='h6'>
                                 Sign In
                             </Typography>
                         </Button>
                     </div>
                     <div className={classes.callToAction}>
-                        <Typography variant='h6' style={{margin: 'auto',}}>
+                        <Typography variant='h6' style={{ margin: 'auto', }}>
                             Don't have an account?
                         </Typography>
                     </div>
                     <div className={classes.signUp}>
-                        <Typography variant='subtitle1' style={{fontWeight: 'bold'}}>
+                        <Typography variant='subtitle1' style={{ fontWeight: 'bold' }}>
                             <Link href='#'>
                                 Sign up here!
                             </Link>
