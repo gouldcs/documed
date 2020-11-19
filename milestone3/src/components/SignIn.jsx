@@ -21,21 +21,29 @@ const useStyles = makeStyles(
             elevation: 3,
             display: 'flex',
             flexDirection:'column',
+            alignContent: 'center',
             margin: 'auto',
-            borderRadius: 12,
+            borderRadius: 20,
             backgroundColor: '#F8F8F8',
             marginBottom: 30
         },
 
-        heading: {
-            margin: 'auto',
+        contentContainer: {
             display: 'flex',
+            flexDirection: 'column',
+            width: '80%',
+            alignSelf: 'center',
+            alignContent: 'center',
+        },
+
+        heading: {
+            display: 'flex',
+            margin: 'auto',
             marginTop: 40,
             marginBottom: 20,
         },
 
         buttonDiv: {
-            margin: 'auto',
             display:'flex',
             marginTop: 20,
             marginBottom: 15
@@ -44,7 +52,7 @@ const useStyles = makeStyles(
         button: {
             variant: 'contained',
             color: 'primary',
-            borderRadius: 3,
+            borderRadius: 100,
             border: 40,
             width: 60,
             height: 30,
@@ -53,14 +61,15 @@ const useStyles = makeStyles(
 
         inputFields: {
             display: 'flex',
-            marginLeft: 40,
+            marginLeft: 50,
             marginBottom: 10,
-            marginRight: 40,
+            marginRight: 50,
         },
 
-        centered: {
+        callToAction: {
             display: 'flex',
-            margin: 'auto',
+            alignContent: 'center',
+            justifySelf: 'center',
         },
 
         signUp: {
@@ -80,61 +89,64 @@ const SignIn = (props) => {
     return (
         <div className={classes.defaultSetup}>
             <Paper className={classes.paper}>
-                <div className={classes.heading}>
-                    <Typography variant='h4'>
-                        Sign in to your DocuMed account
-                    </Typography>
-                </div>
-                <div className={classes.inputFields}>
-                    <Typography variant='h6'>
-                        Email
-                    </Typography>
-                </div>
-                <div className={classes.inputFields}>
-                    <TextField id="email" variant="filled" fullWidth>
-                    </TextField>
-                </div>
-                <div className={classes.inputFields}>
-                    <Typography variant='h6'>
-                        Password
-                    </Typography>
-                </div>
-                <div className={classes.inputFields}>
-                    <TextField id="password" variant="filled" fullWidth>
-                    </TextField>
-                </div>
-                <div className={classes.inputFields}>
-                    <Typography variant='subtitle2' style={{fontWeight: 'bold'}}>
-                        <Link href="#">
-                        Forgot password? Click here
-                        </Link>
-                    </Typography>
-                </div>
-                <div className={classes.buttonDiv}>
-                    <Button variant="contained"
-                    style={{
-                        width:400,
-                        height: 50,
-                        backgroundColor:"#6681ff",
-                        textTransform: "none",
-                        color: 'white'
-                    }}>
-                        <Typography variant = 'h6'>
-                            Sign In
+                <div className={classes.contentContainer}>
+                    <div className={classes.heading}>
+                        <Typography variant='h4'>
+                            Sign in to your DocuMed account
                         </Typography>
-                    </Button>
-                </div>
-                <div className={classes.centered}>
-                    <Typography variant='h6'>
-                        Don't have an account?
-                    </Typography>
-                </div>
-                <div className={classes.signUp}>
-                    <Typography variant='subtitle1' style={{fontWeight: 'bold'}}>
-                        <Link href='#'>
-                            Sign up here!
-                        </Link>
-                    </Typography>
+                    </div>
+                    <div className={classes.inputFields}>
+                        <Typography variant='h6'>
+                            Email
+                        </Typography>
+                    </div>
+                    <div className={classes.inputFields}>
+                        <TextField id="email" variant="filled" fullWidth>
+                        </TextField>
+                    </div>
+                    <div className={classes.inputFields}>
+                        <Typography variant='h6'>
+                            Password
+                        </Typography>
+                    </div>
+                    <div className={classes.inputFields}>
+                        <TextField id="password" variant="filled" fullWidth>
+                        </TextField>
+                    </div>
+                    <div className={classes.inputFields}>
+                        <Typography variant='subtitle2' style={{fontWeight: 'bold'}}>
+                            <Link href="#">
+                            Forgot password? Click here
+                            </Link>
+                        </Typography>
+                    </div>
+                    <div className={classes.buttonDiv}>
+                        <Button variant="contained"
+                        style={{
+                            width:400,
+                            margin: 'auto',
+                            height: 50,
+                            backgroundColor:"#6681ff",
+                            textTransform: "none",
+                            color: 'white'
+                        }}>
+                            <Typography variant = 'h6'>
+                                Sign In
+                            </Typography>
+                        </Button>
+                    </div>
+                    <div className={classes.callToAction}>
+                        <Typography variant='h6' style={{margin: 'auto',}}>
+                            Don't have an account?
+                        </Typography>
+                    </div>
+                    <div className={classes.signUp}>
+                        <Typography variant='subtitle1' style={{fontWeight: 'bold'}}>
+                            <Link href='#'>
+                                Sign up here!
+                            </Link>
+                        </Typography>
+                    </div>
                 </div>
             </Paper>
 

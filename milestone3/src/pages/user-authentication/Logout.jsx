@@ -19,7 +19,16 @@ const useStyles = makeStyles(
 
     logoutText: {
       display: "flex",
+      paddingTop: '20%',
       justifyContent: "center",
+      alignContent: 'center',
+      verticalAlign: "center",
+    },
+
+    signBackIn: {
+      display: "flex",
+      justifyContent: "center",
+      alignContent: 'center',
       verticalAlign: "center",
     },
   }),
@@ -33,7 +42,10 @@ const Logout = (props) => {
     <div className={classes.logout}>
       <Header />
       <div className={classes.logoutText}>
-        <Typography>You have successfully signed out.</Typography>
+        <Typography style={{fontSize: 36,}}>You have successfully signed out.</Typography>
+      </div>
+      <div className={classes.signBackIn}>
+        <Button style={{fontSize: 24, color: '#6681FF', textTransform: 'none',}}>Log back in</Button>
       </div>
     </div>
   )
