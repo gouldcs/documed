@@ -9,8 +9,31 @@ import Typography from "@material-ui/core/Typography"
 
 const useStyles = makeStyles(
   (theme) => ({
+    nameHeader: {
+      display: "flex",
+      justifyContent: "center",
+      alignContent: "center",
+    },
+
     root: {
       flexGrow: 1,
+    },
+
+    centeredTitle: {
+      //display: "flex",
+      //flex: 1,
+      //flexGrow: 1,
+      fontWeight: "bold",
+      //alignSelf: "center",
+      color: "#FFFFFF",
+      paddingTop: 10,
+      paddingBottom: 10,
+      textAlign: "center",
+    },
+
+    centeredTitleText: {
+      fontWeight: "bold",
+      textAlign: "center",
     },
 
     title: {
@@ -30,8 +53,6 @@ const useStyles = makeStyles(
 
     logout: {
       color: "#FFFFFF",
-      //display: "flex",
-      //flex: 5,
     },
   }),
   { name: "Header" }
@@ -39,14 +60,27 @@ const useStyles = makeStyles(
 
 const Header = (props) => {
   const classes = useStyles(props)
+  let toReturn = ""
 
-  return (
-    <div className={classes.root}>
+  if (props.text === "DocuMed" || props.text === "Welcome to DocuMed") {
+    toReturn = (<div className={classes.root}>
+      <AppBar position="static" style={{ background: "#1F5780", alignItems: "center" }}>
+        <Toolbar>
+          <div className={classes.centeredTitle}>
+            <Typography variant="h3" className={classes.centeredTitleText}>
+              {props.text}
+            </Typography>
+          </div>
+        </Toolbar>
+      </AppBar>
+    </div>)
+  } else {
+    toReturn = (<div className={classes.root}>
       <AppBar position="static" style={{ background: "#1F5780" }}>
         <Toolbar>
           <Typography variant="h3" className={classes.title}>
             DocuMed
-          </Typography>
+         </Typography>
           <IconButton size="medium" className={classes.settings}>
             <SettingsIcon />
           </IconButton>
@@ -55,8 +89,10 @@ const Header = (props) => {
           </IconButton>
         </Toolbar>
       </AppBar>
-    </div>
-  )
+    </div>)
+  }
+
+  return toReturn
 }
 
 export default Header
