@@ -22,7 +22,10 @@ const useStyles = makeStyles((theme) => ({
 
   mainLayout: {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "row",
+    alignSelf: 'center',
+    justifySelf: 'center',
+    width: '80%',
   },
 
   pageTitle: {
@@ -30,22 +33,21 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
   },
 
-  emptyForNow: {
-    display: "flex",
-    flex: 1,
+  empty: {
+    width: 225,
   },
 
   title: {
     display: "flex",
+    alignSelf: "left",
     flex: 5,
     padding: 12,
     paddingTop: 20,
-    paddingLeft: 55,
   },
 
   content: {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     flex: 1,
   },
 
@@ -75,20 +77,24 @@ const MainLayout = (props) => {
       <div className={classes.header}>
         <Header />
       </div>
-      <div className={classes.pageTitle}>
-        <div className={classes.emptyForNow} />
-        <div className={classes.title}>
-          <Typography variant="h5">Dashboard</Typography>
-        </div>
-      </div>
       <div className={classes.content}>
-        <div className={classes.menu}>
-          <MenuPanel />
+        <div className={classes.mainLayout}>
+          <div className={classes.empty}></div>
+          <div className={classes.pageTitle}>
+            <div className={classes.title}>
+              <Typography variant="h5">Dashboard</Typography>
+            </div>
+          </div>
         </div>
-        <div className={classes.pageContent}>
-          <Paper className={classes.paper}>
-            <Dashboard />
-          </Paper>
+        <div className={classes.mainLayout}>
+          <div className={classes.menu}>
+            <MenuPanel />
+          </div>
+          <div className={classes.pageContent}>
+            <Paper className={classes.paper}>
+              <Dashboard />
+            </Paper>
+          </div>
         </div>
       </div>
     </div>
