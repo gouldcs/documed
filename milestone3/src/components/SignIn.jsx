@@ -17,7 +17,7 @@ const useStyles = makeStyles(
         },
 
         paper: {
-            maxWidth: 750,
+            maxWidth: 700,
             minHeight: 400,
             flex: 4,
             elevation: 3,
@@ -63,7 +63,12 @@ const useStyles = makeStyles(
         centered: {
             display: 'flex',
             margin: 'auto',
-            marginBottom: 15,
+        },
+
+        signUp: {
+            display:'flex',
+            margin: 'auto',
+            marginBottom: 40,
         }
 
 
@@ -78,12 +83,12 @@ const SignIn = (props) => {
         <div className={classes.defaultSetup}>
             <Paper className={classes.paper}>
                 <div className={classes.heading}>
-                    <Typography variant='h4' style={{fontWeight:'bold'}}>
+                    <Typography variant='h4'>
                         Sign in to your DocuMed account
                     </Typography>
                 </div>
                 <div className={classes.inputFields}>
-                    <Typography variant='h6' style={{fontWeight:'bold'}}>
+                    <Typography variant='h6'>
                         Email
                     </Typography>
                 </div>
@@ -92,7 +97,7 @@ const SignIn = (props) => {
                     </TextField>
                 </div>
                 <div className={classes.inputFields}>
-                    <Typography variant='h6' style={{fontWeight:'bold'}}>
+                    <Typography variant='h6'>
                         Password
                     </Typography>
                 </div>
@@ -101,7 +106,7 @@ const SignIn = (props) => {
                     </TextField>
                 </div>
                 <div className={classes.inputFields}>
-                    <Typography variant='subtitle2' style={{fontWeight:'bold'}}>
+                    <Typography variant='subtitle2' style={{fontWeight: 'bold'}}>
                         <Link href="#">
                         Forgot password? Click here
                         </Link>
@@ -116,18 +121,18 @@ const SignIn = (props) => {
                         textTransform: "none",
                         color: 'white'
                     }}>
-                        <Typography variant = 'h6' style={{fontWeight:'bold'}}>
+                        <Typography variant = 'h6'>
                             Sign In
                         </Typography>
                     </Button>
                 </div>
                 <div className={classes.centered}>
-                    <Typography variant='h6' style={{fontWeight:'bold'}}>
+                    <Typography variant='h6'>
                         Don't have an account?
                     </Typography>
                 </div>
-                <div className={classes.centered}>
-                    <Typography variant='subtitle1' style={{fontWeight:'bold'}}>
+                <div className={classes.signUp}>
+                    <Typography variant='subtitle1' style={{fontWeight: 'bold'}}>
                         <Link href='#'>
                             Sign up here!
                         </Link>
