@@ -114,11 +114,11 @@ const SignIn = (props) => {
                         </TextField>
                     </div>
                     <div className={classes.inputFields}>
-                        <Typography variant='subtitle2' style={{fontWeight: 'bold'}}>
-                            <Link href="#">
-                            Forgot password? Click here
-                            </Link>
-                        </Typography>
+                        <Link href="#">
+                            <Typography variant='subtitle2' style={{color:'#6681ff', fontWeight:"bold"}}>
+                                Forgot password? Click here
+                            </Typography>
+                        </Link>
                     </div>
                     <div className={classes.buttonDiv}>
                         <Button variant="contained"
@@ -141,11 +141,11 @@ const SignIn = (props) => {
                         </Typography>
                     </div>
                     <div className={classes.signUp}>
-                        <Typography variant='subtitle1' style={{fontWeight: 'bold'}}>
-                            <Link href='#'>
+                        <Link href='#'>
+                            <Typography variant='subtitle1' style={{color:'#6681ff', fontWeight:"bold"}}>
                                 Sign up here!
-                            </Link>
-                        </Typography>
+                            </Typography>
+                        </Link>
                     </div>
                 </div>
             </Paper>
