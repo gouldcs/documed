@@ -64,7 +64,7 @@ const Header = (props) => {
 
   if (props.text === "DocuMed" || props.text === "Welcome to DocuMed") {
     toReturn = (<div className={classes.root}>
-      <AppBar position="static" style={{ background: "#1F5780", alignItems: "center" }}>
+      <AppBar position="static" style={{ background: "#1F5780",}}>
         <Toolbar>
           <div className={classes.centeredTitle}>
             <Typography variant="h3" className={classes.centeredTitleText}>
