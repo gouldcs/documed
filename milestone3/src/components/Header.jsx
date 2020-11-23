@@ -76,7 +76,7 @@ const Header = (props) => {
     </div>)
   } else {
     toReturn = (<div className={classes.root}>
-      <AppBar position="static" style={{ background: "#1F5780" }}>
+      <AppBar position="static" style={{ background: "#1F5780", }}>
         <Toolbar>
           <Typography variant="h3" className={classes.title}>
             DocuMed

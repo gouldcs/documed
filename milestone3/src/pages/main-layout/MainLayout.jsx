@@ -6,6 +6,7 @@ import Paper from "@material-ui/core/Paper"
 import Header from "../../components/Header"
 import MenuPanel from "../../components/MenuPanel"
 import UploadPage from "./contact/ContactTemplate"
+import Upload from "./upload/Upload"
 import Accommodations from "./mydocs/accommodations/Accommodations"
 import Dashboard from "./dashboard/Dashboard"
 import { Typography } from "@material-ui/core"
@@ -94,7 +95,7 @@ const MainLayout = (props) => {
           </div>
           <div className={classes.pageContent}>
             <Paper className={classes.paper}>
-              <Accommodations />
+              <Upload />
             </Paper>
           </div>
         </div>
