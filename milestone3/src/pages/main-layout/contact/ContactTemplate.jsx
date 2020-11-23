@@ -6,12 +6,13 @@ import FormControl from "@material-ui/core/FormControl"
 import InputLabel from "@material-ui/core/InputLabel"
 import MenuItem from "@material-ui/core/MenuItem"
 import Select from "@material-ui/core/Select"
-import { Typography } from "@material-ui/core"
+import { Typography, TextField } from "@material-ui/core"
 
 const useStyles = makeStyles((theme) => ({
   uploadContainer: {
     display: "flex",
     flexDirection: "column",
+    padding: 20,
   },
 
   select: {
@@ -33,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
     width: "20%",
   },
 
-  message: {
-    outline: 2,
+  messageContainer: {
+    padding: 20,
   },
 
   button: {
@@ -45,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
 
 const ContactTemplate = (props) => {
   const classes = useStyles(props)
+  console.log(props.recipient)
 
   return (
     <div className={classes.uploadContainer}>
@@ -56,11 +58,10 @@ const ContactTemplate = (props) => {
           <FormControl className={classes.formControl}>
             <Select
               defaultValue=""
-              // variant="outlined"
               className={classes.select}
             >
               <MenuItem value={""} disabled>
-                Select Doctor
+                Select {props.recipient}
               </MenuItem>
               <MenuItem value={"Dr. Toal"}>Dr. Toal</MenuItem>
               <MenuItem value={"Dr. Forney"}>Dr. Forney</MenuItem>
@@ -68,8 +69,8 @@ const ContactTemplate = (props) => {
           </FormControl>
         </div>
       </div>
-      <div className={classes.message}>
-        Text goes here (also add doc attachment feature)
+      <div className={classes.messageContainer}>
+        <TextField multiline variant="outlined" style={{ width: "100%" }} />
       </div>
       <div className={classes.button}>
         <Button>Send</Button>

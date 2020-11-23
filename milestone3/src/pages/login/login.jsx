@@ -1,7 +1,7 @@
 import React from "react";
 
-import SignIn from "../../components/SignIn";
-import Header from "../../components/Header";
+import SignIn from "./login-components/SignIn"
+import Header from "../../components/Header"
 
 
 const Login = (props) => {

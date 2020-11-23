@@ -6,6 +6,7 @@ import Paper from "@material-ui/core/Paper"
 import Header from "../../components/Header"
 import MenuPanel from "../../components/MenuPanel"
 import UploadPage from "./contact/ContactTemplate"
+import Accommodations from "./mydocs/accommodations/Accommodations"
 import Dashboard from "./dashboard/Dashboard"
 import { Typography } from "@material-ui/core"
 
@@ -66,6 +67,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     background: "#F8F8F8",
     borderRadius: 20,
+    minHeight: 475,
   },
 }))
 
@@ -92,7 +94,7 @@ const MainLayout = (props) => {
           </div>
           <div className={classes.pageContent}>
             <Paper className={classes.paper}>
-              <Dashboard />
+              <Accommodations />
             </Paper>
           </div>
         </div>
