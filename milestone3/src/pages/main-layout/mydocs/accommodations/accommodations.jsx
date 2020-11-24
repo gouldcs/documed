@@ -171,7 +171,7 @@ const Accommodations = (props) => {
                 }}>
                 <Typography variant='h6'>
                   Done
-                    </Typography>
+                </Typography>
               </Button>
             </div>
           </div>

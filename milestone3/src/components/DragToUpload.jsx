@@ -8,10 +8,13 @@ const useStyles = makeStyles(
     (theme) => ({
 
       outlineContainer: {
-        width: 450,
-        height: 438,
-        backgroundImage: 'url("data:image/svg+xml,%3csvg width=\'100%25\' height=\'100%25\' xmlns=\'http://www.w3.org/2000/svg\'%3e%3crect width=\'100%25\' height=\'100%25\' fill=\'none\' rx=\'45\' ry=\'45\' stroke=\'grey\' stroke-width=\'15\' stroke-dasharray=\'25\' stroke-dashoffset=\'0\' stroke-linecap=\'round\'/%3e%3c/svg%3e")',
-        borderRadius: 45,
+        width: 250,
+        height: 225,
+        borderColor: "grey",
+        borderStyle: "dashed",
+        borderWidth: "medium",
+        borderBlock: "20",
+        borderRadius: 25,
         justifyContent: "center",
         alignContent: "center",
 
@@ -20,7 +23,7 @@ const useStyles = makeStyles(
       dragPrompt: {
         color: "grey",
         align: "center",
-        paddingTop: "45%",
+        paddingTop: "38%",
       },
     
 }))
@@ -30,7 +33,7 @@ const DragToUpload = (props) => {
 
   return (
     <div className={classes.outlineContainer}>
-      <Typography className={classes.dragPrompt} variant="h4" align="center">
+      <Typography className={classes.dragPrompt} variant="h6" align="center">
         Drag documents here
       </Typography>
     </div>
