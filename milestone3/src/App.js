@@ -1,11 +1,18 @@
 import "./App.css"
-import MainLayout from "./pages/main-layout/MainLayout"
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import MainLayout from "./pages/main-layout/MainLayout";
+import SignUp from "./pages/sign-up/SignUp";
+import Logout from "./pages/logout/Logout";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
-    <div className="App">
-      <MainLayout />
-    </div>
+    <Router>
+        <Route path="/MainLayout" component={MainLayout} />
+        <Route path="/" exact component={SignUp} />
+        <Route path="/Logout" component={Logout} />
+        <Route path="/Login" component={Login} />
+    </Router>
   )
 }
 

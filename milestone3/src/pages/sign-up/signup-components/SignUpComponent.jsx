@@ -140,21 +140,23 @@ const SignUpComponent = () => {
                     </div>
                 </div>
                 <div className={classes.buttonDiv}>
-                    <Button variant="contained"
-                    style={{
-                        width:400,
-                        height: 50,
-                        backgroundColor:"#6681ff",
-                        textTransform: "none",
-                        color: 'white'
-                    }}>
-                        <Typography variant = 'h6'>
-                            Sign In
-                        </Typography>
-                    </Button>
+                    <Link href="/MainLayout">
+                        <Button variant="contained"
+                        style={{
+                            width:400,
+                            height: 50,
+                            backgroundColor:"#6681ff",
+                            textTransform: "none",
+                            color: 'white'
+                        }}>
+                            <Typography variant = 'h6'>
+                                Sign Up
+                            </Typography>
+                        </Button>
+                    </Link>
                 </div>
                 <div className={classes.signInLink}>
-                    <Link>
+                    <Link href={`/Login`}>
                         <Typography variant="subtitle1" style={{color:'#6681ff', fontWeight:"bold"}}>
                             or Sign In
                         </Typography>

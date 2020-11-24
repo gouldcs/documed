@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles"
 
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
+import Link from "@material-ui/core/Link";
 
 import Header from "../../components/Header"
 
@@ -41,7 +42,9 @@ const Logout = (props) => {
         <Typography style={{ fontSize: 36, }}>You have successfully signed out.</Typography>
       </div>
       <div className={classes.signBackIn}>
-        <Button style={{ fontSize: 24, color: '#6681FF', textTransform: 'none', }}>Sign back in</Button>
+            <Link href={"/Login"}>
+                <Button style={{ fontSize: 24, color: '#6681FF', textTransform: 'none', }}>Sign back in</Button>
+            </Link>
       </div>
     </div>
   )
