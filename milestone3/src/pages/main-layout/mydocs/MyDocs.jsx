@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: "none",
     },
 
-    /// Cancel/Done buttons
+    /// button container
     optionsContainer: {
       display: "flex",
       flexDirection: "row",
