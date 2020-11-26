@@ -5,7 +5,8 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp"
 import IconButton from "@material-ui/core/IconButton"
 import SettingsIcon from "@material-ui/icons/Settings"
 import Toolbar from "@material-ui/core/Toolbar"
-import Typography from "@material-ui/core/Typography"
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -84,9 +85,11 @@ const Header = (props) => {
           <IconButton size="medium" className={classes.settings}>
             <SettingsIcon />
           </IconButton>
-          <IconButton size="medium" edge="end" className={classes.logout}>
-            <ExitToAppIcon />
-          </IconButton>
+          <Link href={"/Logout"}>
+            <IconButton size="medium" edge="end" className={classes.logout}>
+                <ExitToAppIcon />
+            </IconButton>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>)

@@ -121,19 +121,21 @@ const SignIn = (props) => {
                         </Typography>
                     </div>
                     <div className={classes.buttonDiv}>
-                        <Button variant="contained"
-                            style={{
-                                width: 400,
-                                margin: 'auto',
-                                height: 50,
-                                backgroundColor: "#6681ff",
-                                textTransform: "none",
-                                color: 'white'
-                            }}>
-                            <Typography variant='h6'>
-                                Sign In
-                            </Typography>
-                        </Button>
+                        <Link href={"/MainLayout"}>
+                            <Button variant="contained"
+                                style={{
+                                    width: 400,
+                                    margin: 'auto',
+                                    height: 50,
+                                    backgroundColor: "#6681ff",
+                                    textTransform: "none",
+                                    color: 'white'
+                                }}>
+                                <Typography variant='h6'>
+                                    Sign In
+                                </Typography>
+                            </Button>
+                        </Link>
                     </div>
                     <div className={classes.callToAction}>
                         <Typography variant='h6' style={{ margin: 'auto', }}>
@@ -141,11 +143,11 @@ const SignIn = (props) => {
                         </Typography>
                     </div>
                     <div className={classes.signUp}>
-                        <Typography variant='subtitle1' style={{ fontWeight: 'bold' }}>
-                            <Link href='#'>
+                        <Link href='/'>
+                            <Typography variant='subtitle1' style={{ fontWeight: 'bold' }}>
                                 Sign up here!
-                            </Link>
-                        </Typography>
+                            </Typography>
+                        </Link>
                     </div>
                 </div>
             </Paper>
