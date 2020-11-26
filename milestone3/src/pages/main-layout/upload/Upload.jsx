@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import Button from '@material-ui/core/Button';
 import Checkbox from '@material-ui/core/Checkbox';
 import Divider from '@material-ui/core/Divider';
+import { DropzoneArea } from 'material-ui-dropzone';
 import UploadBox from "../../../components/DragToUpload";
 import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -34,43 +35,26 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 50,
   },
 
-  dashboardContent: {
+  topRow: {
     display: "flex",
     flexDirection: "row",
-    paddingLeft: 50,
-  },
-
-  leftColumn: {
-    display: "flex",
-    flexDirection: "column",
-    paddingRight: 10,
-    alignItems: "center",
+    justifyContent: "center",
   },
   
-  leftColumnItem: {
-    paddingTop: 10,
-    paddingBottom: 15,
+  topRowItem: {
+    width: "90%",
+    alignContent: "center",
   },
 
-  centerColumn: {
-    display: "flex",
-    flexDirection: "row",
-    paddingLeft: 75,
-    paddingRight: 50,
-  },
-
-  rightColumn: {
+  bottomRow: {
     display: "flex",
     flexDirection: "column",
-  },
-
-  tableContainer: {
-    width: '90%',
+    alignSelf: "center",
+    alignContent: "center",
   },
 
   classSelectionItem: {
     fontSize: 18,
-    paddingTop: 10,
     paddingBottom: 10,
     fontWeight: "regular",
     color: "#000000",
@@ -82,26 +66,16 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     paddingTop: 70,
     paddingBottom: 10,
+    alignSelf: "center",
+    alignContent: "center",
   },
 
   optionButton: {
-    paddingLeft: 10,
-    paddingRight: 25,
+    paddingLeft: 15,
+    paddingRight: 15,
   },
 
 }))
-
-function createData(filesUploaded) {
-  return { filesUploaded };
-}
-
-const rows = [
-  createData('drham_adhd_accom_lateexam.pdf'),
-  createData('drham_adhd_accom_recordedlectures.docx'),
-  createData('drham_dep_accom_serviceanimal.pdf'),
-  createData('drham_anx_accom_relaxeddeadlines.docx'),
-  createData('drham_anx_accom_frequentbreaks.pdf'),
-];
 
 const Accommodations = (props) => {
   const classes = useStyles(props)
@@ -110,57 +84,16 @@ const Accommodations = (props) => {
     <div className={classes.root}>
       <div className={classes.dashboardContent}>
 
-        <div className={classes.leftColumn}>
-          <div className={classes.leftColumnItem}>
-            <UploadBox />
-          </div>
-          <div className={classes.leftColumnItem}>
-            <Typography variant="h5">
-              or
-            </Typography>
-          </div>
-          <div className={classes.leftColumnItem}>
-            <div className={classes.optionButton}>
-              <Button variant="contained"
-                style={{
-                    width:225,
-                    height: 50,
-                    backgroundColor:"#C4C4C4",
-                    textTransform: "none",
-                    color: 'white',
-                    borderRadius: 100,
-                }}>
-                  <Typography variant = 'h6'>
-                      Select Documents
-                  </Typography>
-              </Button>
-            </div>
+        <div className={classes.topRow}>
+          <div className={classes.topRowItem}>
+            <DropzoneArea
+              onChange={(files) => console.log('Files:', files)}
+              className={classes.topRowItem}
+            />
           </div>
         </div>
 
-        <div className={classes.centerColumn}>
-          <Divider orientation="vertical" flexItem />
-        </div>
-
-        <div className={classes.rightColumn}>
-          <div className={classes.tableContainer}>
-            <Table className={classes.table} aria-label="simple table">
-              <TableHead>
-                <TableRow>
-                  <TableCell>Files Selected</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows.map((row) => (
-                  <TableRow key={row.filesUploaded}>
-                    <TableCell component="th" scope="row" style={{fontWeight:"light",}}>
-                      {row.filesUploaded}
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </div>
+        <div className={classes.bottomRow}>
           <div className={classes.optionsContainer}>
             <div className={classes.optionButton}>
               <Button variant="contained"
