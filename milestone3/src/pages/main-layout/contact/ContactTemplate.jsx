@@ -1,12 +1,14 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
-import Button from "@material-ui/core/Button"
-import FormControl from "@material-ui/core/FormControl"
-import InputLabel from "@material-ui/core/InputLabel"
-import MenuItem from "@material-ui/core/MenuItem"
-import Select from "@material-ui/core/Select"
-import { Typography, TextField } from "@material-ui/core"
+import {
+  Button,
+  FormControl,
+  MenuItem,
+  Select,
+  Typography,
+  TextField,
+} from "@material-ui/core"
 
 const useStyles = makeStyles((theme) => ({
   uploadContainer: {
@@ -46,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
 
 const ContactTemplate = (props) => {
   const classes = useStyles(props)
+
   console.log(props.recipient)
 
   return (
@@ -56,10 +59,7 @@ const ContactTemplate = (props) => {
         </div>
         <div className={classes.selectElement}>
           <FormControl className={classes.formControl}>
-            <Select
-              defaultValue=""
-              className={classes.select}
-            >
+            <Select defaultValue="" className={classes.select}>
               <MenuItem value={""} disabled>
                 Select {props.recipient}
               </MenuItem>
@@ -70,7 +70,12 @@ const ContactTemplate = (props) => {
         </div>
       </div>
       <div className={classes.messageContainer}>
-        <TextField multiline variant="outlined" style={{ width: "100%" }} />
+        <TextField
+          multiline
+          rows={15}
+          variant="outlined"
+          style={{ width: "100%" }}
+        />
       </div>
       <div className={classes.button}>
         <Button>Send</Button>

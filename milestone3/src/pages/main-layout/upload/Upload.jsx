@@ -1,36 +1,30 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
-import Button from '@material-ui/core/Button';
-import Checkbox from '@material-ui/core/Checkbox';
-import Divider from '@material-ui/core/Divider';
-import { DropzoneArea } from 'material-ui-dropzone';
-import UploadBox from "../../../components/DragToUpload";
-import FormControl from '@material-ui/core/FormControl';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
-import MenuList from "@material-ui/core/MenuList";
-import MenuItem from "@material-ui/core/MenuItem";
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
+import Button from "@material-ui/core/Button"
+import Checkbox from "@material-ui/core/Checkbox"
+import Divider from "@material-ui/core/Divider"
+import { DropzoneArea } from "material-ui-dropzone"
+import UploadBox from "../../../components/DragToUpload"
+import FormControl from "@material-ui/core/FormControl"
+import FormControlLabel from "@material-ui/core/FormControlLabel"
+import FormGroup from "@material-ui/core/FormGroup"
+import MenuList from "@material-ui/core/MenuList"
+import MenuItem from "@material-ui/core/MenuItem"
+import Table from "@material-ui/core/Table"
+import TableBody from "@material-ui/core/TableBody"
+import TableCell from "@material-ui/core/TableCell"
+import TableHead from "@material-ui/core/TableHead"
+import TableRow from "@material-ui/core/TableRow"
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
 import { Typography } from "@material-ui/core"
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
-    height: '90%',
+    width: "100%",
+    height: "90%",
     paddingTop: 50,
     paddingBottom: 50,
   },
@@ -40,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "center",
   },
-  
+
   topRowItem: {
     width: "90%",
     alignContent: "center",
@@ -74,20 +68,18 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 15,
     paddingRight: 15,
   },
-
 }))
 
-const Accommodations = (props) => {
+const Upload = (props) => {
   const classes = useStyles(props)
 
   return (
     <div className={classes.root}>
       <div className={classes.dashboardContent}>
-
         <div className={classes.topRow}>
           <div className={classes.topRowItem}>
             <DropzoneArea
-              onChange={(files) => console.log('Files:', files)}
+              onChange={(files) => console.log("Files:", files)}
               className={classes.topRowItem}
             />
           </div>
@@ -96,40 +88,40 @@ const Accommodations = (props) => {
         <div className={classes.bottomRow}>
           <div className={classes.optionsContainer}>
             <div className={classes.optionButton}>
-              <Button variant="contained"
+              <Button
+                variant="contained"
                 style={{
                   width: 150,
                   height: 50,
                   backgroundColor: "#FF5E5E",
                   textTransform: "none",
-                  color: 'white',
+                  color: "white",
                   borderRadius: 100,
-                }}>
-                <Typography variant='h6'>
-                  Cancel
-                    </Typography>
+                }}
+              >
+                <Typography variant="h6">Cancel</Typography>
               </Button>
             </div>
             <div className={classes.optionButton}>
-              <Button variant="contained"
+              <Button
+                variant="contained"
                 style={{
                   width: 150,
                   height: 50,
                   backgroundColor: "#6681ff",
                   textTransform: "none",
-                  color: 'white',
+                  color: "white",
                   borderRadius: 100,
-                }}>
-                <Typography variant='h6'>
-                  Done
-                </Typography>
+                }}
+              >
+                <Typography variant="h6">Done</Typography>
               </Button>
             </div>
           </div>
         </div>
-    </div>       
-  </div> 
+      </div>
+    </div>
   )
 }
 
-export default Accommodations
+export default Upload

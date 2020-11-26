@@ -7,7 +7,6 @@ import Header from "../../components/Header"
 import MenuPanel from "../../components/MenuPanel"
 import UploadPage from "./contact/ContactTemplate"
 import Upload from "./upload/Upload"
-import Accommodations from "./mydocs/accommodations/Accommodations"
 import Dashboard from "./dashboard/Dashboard"
 import { Typography } from "@material-ui/core"
 
@@ -25,9 +24,9 @@ const useStyles = makeStyles((theme) => ({
   mainLayout: {
     display: "flex",
     flexDirection: "row",
-    alignSelf: 'center',
-    justifySelf: 'center',
-    width: '80%',
+    alignSelf: "center",
+    justifySelf: "center",
+    width: "80%",
   },
 
   pageTitle: {
