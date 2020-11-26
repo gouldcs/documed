@@ -2,11 +2,7 @@ import React, { useState } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
 import Button from '@material-ui/core/Button';
-import Checkbox from '@material-ui/core/Checkbox';
 import Divider from '@material-ui/core/Divider';
-import FormControl from '@material-ui/core/FormControl';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
 import MenuList from "@material-ui/core/MenuList"
 import MenuItem from "@material-ui/core/MenuItem"
 import { Typography } from "@material-ui/core"
@@ -49,7 +45,6 @@ const useStyles = makeStyles((theme) => ({
       //backgroundColor: "lightblue",
     },
 
-    /// ??????????
     docSelectionItem: {
       fontSize: 18,
       paddingTop: 10,
