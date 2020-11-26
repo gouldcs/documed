@@ -31,13 +31,12 @@ const useStyles = makeStyles((theme) => ({
 
   topRow: {
     display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
+    flexDirection: "column",
+    alignItems: "center",
   },
 
   topRowItem: {
     width: "90%",
-    alignContent: "center",
   },
 
   bottomRow: {
@@ -82,6 +81,11 @@ const Upload = (props) => {
               onChange={(files) => console.log("Files:", files)}
               className={classes.topRowItem}
             />
+          </div>
+          <div className={classes.topRowItem}>
+            <Typography style={{fontSize: 14,alignSelf: "center",color:"#FF5E5E"}}>
+              *All uploaded documents can be found in MyDocs*
+            </Typography>
           </div>
         </div>
 

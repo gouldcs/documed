@@ -33,9 +33,10 @@ function createData(alerts, date) {
 }
 
 const rows = [
-  createData('You have 3 new documents', '10/15/20'),
-  createData('You have 6 new accommodations', '10/15/20'),
-  createData('Your doctors note was rejected', '10/18/20'),
+  createData('You have 3 new documents in MyDocs', '10/15/20'),
+  createData('You have 6 new accommodations in MyDocs', '10/15/20'),
+  createData('Your doctors note was rejected.', '10/18/20'),
+  createData('You uploaded 3 new documents to MyDocs', '11/15/20'),
 ];
 
 const Dashboard = (props) => {
@@ -48,7 +49,7 @@ const Dashboard = (props) => {
           Welcome to your DocuMed portal,
         </Typography>
         <Typography style={{fontWeight:"light", fontSize: 28}}>
-          Miranda Cosgrove
+          John Doe
         </Typography>
         <div className={classes.tableContainer}>
           <Table className={classes.table} aria-label="simple table">
