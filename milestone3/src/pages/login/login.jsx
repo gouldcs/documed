@@ -40,7 +40,7 @@ const Login = (props) => {
   return (
     <div>
       <div>
-        <Header text="DocuMed" />
+        <Header text="Welcome to DocuMed" />
       </div>
       <div className={classes.defaultSetup}>
         <Paper className={classes.paper}>
