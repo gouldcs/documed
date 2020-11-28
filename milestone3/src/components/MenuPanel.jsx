@@ -52,42 +52,37 @@ const MenuPanel = (props) => {
       <div className={classes.menuPanel}>
         <Paper className={classes.paper} elevation={3}>
           <MenuList className={classes.navigation}>
+
             <Link href="/home" className={classes.navItemFormat}>
               <MenuItem className={classes.navItem}>
                 Dashboard
               </MenuItem>
             </Link>
+
             <Link href="/home/mydocs" className={classes.navItemFormat}>
               <MenuItem className={classes.navItem}>
                 MyDocs
               </MenuItem>
             </Link>
+
             <Link href="/home/upload" className={classes.navItemFormat}>
               <MenuItem className={classes.navItem}>
                 Upload Docs
               </MenuItem>
             </Link>
-            <Link href="/home/contact" className={classes.navItemFormat}>
+
+            <Link href="/home/contactDoc" className={classes.navItemFormat}>
               <MenuItem className={classes.navItem}>
                 Contact Doctor
               </MenuItem>
             </Link>
-            <Link href="/home/contact" className={classes.navItemFormat}>
+
+            <Link href="/home/contactDSS" className={classes.navItemFormat}>
               <MenuItem className={classes.navItem}>
                 Contact DSS
               </MenuItem>
             </Link>
-              {/* <Switch>
-                  <Route path="/Dashboard">
-                    <Dashboard />
-                  </Route>
-                  <Route path="/MyDocs">
-                    <Users />
-                  </Route>
-                  <Route path="/">
-                    <Home />
-                  </Route>
-              </Switch> */}
+
           </MenuList>
         </Paper>
       </div>

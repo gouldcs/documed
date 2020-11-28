@@ -140,7 +140,7 @@ const SignUpComponent = () => {
                     </div>
                 </div>
                 <div className={classes.buttonDiv}>
-                    <Link href="/MainLayout">
+                    <Link href="/home">
                         <Button variant="contained"
                         style={{
                             width:400,

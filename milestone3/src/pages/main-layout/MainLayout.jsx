@@ -1,14 +1,17 @@
-import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 
-import Paper from "@material-ui/core/Paper"
+import Paper from "@material-ui/core/Paper";
 
-import Header from "../../components/Header"
-import MenuPanel from "../../components/MenuPanel"
-import UploadPage from "./contact/ContactTemplate"
-import Upload from "./upload/Upload"
-import Dashboard from "./dashboard/Dashboard"
-import { Typography } from "@material-ui/core"
+import Header from "../../components/Header";
+import MenuPanel from "../../components/MenuPanel";
+import Dashboard from "./dashboard/Dashboard";
+import MyDocs from "./mydocs/MyDocs";
+import Upload from "./upload/Upload";
+import DoctorContact from "./contact/DoctorContact";
+import DSSContact from "./contact/DSSContact";
+import Typography from "@material-ui/core/Typography";
+import { Switch, Route } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   dashboard: {
@@ -94,7 +97,23 @@ const MainLayout = (props) => {
           </div>
           <div className={classes.pageContent}>
             <Paper className={classes.paper}>
-              <Upload />
+                <Switch>
+                        <Route exact path="/home">
+                            <Dashboard />
+                        </Route>
+                        <Route path="/home/mydocs">
+                            <MyDocs />
+                        </Route>
+                        <Route path="/home/upload">
+                            <Upload />
+                        </Route>
+                        <Route path="/home/contactDoc">
+                            <DoctorContact />
+                        </Route>
+                        <Route path="/home/contactDSS">
+                            <DSSContact />
+                        </Route>
+                </Switch>
             </Paper>
           </div>
         </div>

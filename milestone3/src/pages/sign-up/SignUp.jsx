@@ -16,14 +16,12 @@ const useStyles = makeStyles(
             flexDirection: 'row',
             justifyContent: 'center',
             paddingTop: 50,
-            //marginTop: 55
         },
 
         description: {
             display: 'flex',
             paddingRight: 50,
             paddingTop: 130,
-            //paddingBottom: 30,
             justifyContent: 'center'
         },
     }), { name: "SignUp" }

@@ -8,7 +8,7 @@ import Login from "./pages/login/Login";
 function App() {
   return (
     <Router>
-        <Route path="/MainLayout" component={MainLayout} />
+        <Route path="/home" component={MainLayout} />
         <Route path="/" exact component={SignUp} />
         <Route path="/Logout" component={Logout} />
         <Route path="/Login" component={Login} />
