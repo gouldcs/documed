@@ -1,132 +1,213 @@
-import React, { useState } from "react"
+import React, { useState , Fragment} from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
-import Button from '@material-ui/core/Button';
-import Divider from '@material-ui/core/Divider';
-import MenuList from "@material-ui/core/MenuList";
-import MenuItem from "@material-ui/core/MenuItem";
-import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
+import Button from '@material-ui/core/Button'
+import Divider from '@material-ui/core/Divider'
+import MenuList from "@material-ui/core/MenuList"
+import MenuItem from "@material-ui/core/MenuItem"
+import { Typography } from "@material-ui/core"
+import Link from "@material-ui/core/Link"
 
 const useStyles = makeStyles((theme) => ({
-    /// Main page container
+
     root: {
       width: '100%',
       height: '90%',
       paddingTop: 50,
       paddingBottom: 50,
     },
-
+  
     dashboardContent: {
       display: "flex",
       flexDirection: "row",
       paddingLeft: 50,
     },
-
+  
     leftColumn: {
       display: "flex",
       flexDirection: "column",
 
     },
-    //Button size
+
     navItem: {
       padding: 20
     },
-
+  
     centerColumn: {
       display: "flex",
       flexDirection: "column",
-      paddingRight: 50,
-      paddingLeft: 50,
+      paddingLeft: 25,
+      paddingRight: 25,
     },
 
     rightColumn: {
       display: "flex",
       flexDirection: "column",
-      //backgroundColor: "lightblue",
     },
 
-    docSelectionItem: {
-      fontSize: 18,
+    scroller: {
+      fontSize: 22,
+      height: 300,
+      overflow:'auto',
+    },
+
+    textContainer: {
+      fontSize: 22,
+      paddingLeft: 35,
+      paddingRight: 25,
       paddingTop: 10,
-      paddingBottom: 10,
       fontWeight: "regular",
       color: "#000000",
+      backgroundColor: "#efefef",
       textDecoration: "none",
     },
 
-    /// button container
-    optionsContainer: {
+    buttonContainer: {
       display: "flex",
       flexDirection: "row",
-      paddingTop: 115,
+      paddingTop: 50,
       paddingBottom: 10,
       paddingLeft: 100,
+      paddingRight: 100,
     },
-
-    optionButton: {
-      paddingTop: 100,
-      paddingLeft: 150,
-      paddingRight: 150,
+  
+    accommodationsButton: {
+      paddingLeft: 50,
+      paddingRight: 50,
     },
-
-    dividerStyle: {
-      paddingLeft: 20,
-    }
-
+  
   }))
-
+  
   const MyDocs = (props) => {
     const classes = useStyles(props)
 
+    const documents = [
+      (
+        <Fragment>
+          <div>
+            Raytheon Tole has been diagnosed with ADHD. I have discussed 
+            the implications of this learning disability with him and have
+            determined that it is best for him to have the option to take
+            exams up to 48 hours later than the posted date.
+          </div>
+        </Fragment>
+      ), (
+        <Fragment>
+          <div>
+            Raytheon Tole has been diagnosed with ADHD. I have discussed 
+            the implications of this learning disability with him and have 
+            determined that it is best for him to have access to recorded 
+            lectures before, during, and after the date the lecture will 
+            be given for him to review the content.
+          </div>
+        </Fragment>
+      ), (
+        <Fragment>
+          <div>
+            Raytheon Tole has been diagnosed with ADHD. I have discussed the 
+            implications of this learning disability with him and have 
+            determined that it is best for him to continuously use his laptop 
+            for educational purposes during class. 
+          </div>
+        </Fragment>
+      ), (
+        <Fragment>
+          <div>
+            Raytheon Tole has been diagnosed with Depression. I have discussed the 
+            implications of this learning disability with him and have 
+            determined the presence of his emotional support animal is 
+            mandatory and give him clearance to bring his animal to class.
+          </div>
+        </Fragment>
+      ),
+      (
+        <Fragment>
+          <div>
+            Raytheon Tole has been diagnosed with Depression. I have discussed the 
+            implications of this learning disability with him and have determined 
+            that it would be best if he were allowed to have a reserved seat close 
+            to the door and preferably in the back of the classroom. It is imperative
+            that he is able to take breaks and exit the classroom at any time without 
+            causing a disturbance.
+          </div>
+        </Fragment>
+      )
+    ]
+
     const [document, selectDocument] = useState('document1')
-
-    const handleDocumentSelection = (event, c) => {
-      selectDocument(c)
-      console.log(document === 'document1')
+    const [documentText, displayDocument] = useState(documents[0])
+  
+    const handleDocumentSelection = (event, d) => {
+      selectDocument(d)
+      switch (d) {
+        case "document1": displayDocument(documents[0]); break
+        case "document2": displayDocument(documents[1]); break
+        case "document3": displayDocument(documents[2]); break
+        case "document4": displayDocument(documents[3]); break
+        case "document5": displayDocument(documents[4]); break
+      }
+      console.log(document === d)
     }
-
-
-
+  
     return (
       <div className={classes.root}>
         <div className={classes.dashboardContent}>
           <div className={classes.leftColumn}>
             <Typography variant="h5">
-              Select Document:
-              <hr></hr>
+              Select Document:  
+              <hr></hr>                          
             </Typography>
-            <MenuList className={classes.navigation}>
-              <MenuItem onClick={e => handleDocumentSelection(e, 'document1')} selected={document === 'document1'} className={classes.navItem}>
-                <Typography>ADHD: Late Tests</Typography>
-              </MenuItem>
-              <hr></hr>
-              <MenuItem onClick={e => handleDocumentSelection(e, 'document2')} selected={document === 'document2'} className={classes.navItem}>
-                <Typography>ADHD: Recorded Lectures</Typography>
-              </MenuItem>
-              <hr></hr>
-              <MenuItem onClick={e => handleDocumentSelection(e, 'document3')} selected={document === 'document3'} className={classes.navItem}>
-                <Typography>Depression: ES Animal</Typography>
-              </MenuItem>
-              <hr></hr>
-            </MenuList>
-            <div className={classes.optionContainer}>
-              <div className={classes.optionButton}>
-                    <Link href="/home/mydocs/accommodations">
-                        <Button variant="contained"
-                        style={{
-                            width: 400,
-                            height: 50,
-                            backgroundColor: "#6681ff",
-                            textTransform: "none",
-                            color: 'white',
-                            borderRadius: 100,
-                        }}>
-                            <Typography variant='h6'>
-                                Apply Accommodations
-                            </Typography>
-                        </Button>
-                    </Link>
+            <div>
+              <MenuList className={classes.navigation, classes.scroller}>
+                <MenuItem onClick={e => handleDocumentSelection(e, 'document1')} selected={document === 'document1'} className={classes.navItem}>
+                  <Typography>
+                    ADHD: Late Tests...........................................................(11-21-2020)
+                  </Typography>
+                </MenuItem>
+                <hr></hr>
+                <MenuItem onClick={e => handleDocumentSelection(e, 'document2')} selected={document === 'document2'} className={classes.navItem}>
+                  <Typography>
+                    ADHD: Recorded Lectures.............................................(11-12-2020)
+                  </Typography>
+                </MenuItem>
+                <hr></hr>
+                <MenuItem onClick={e => handleDocumentSelection(e, 'document3')} selected={document === 'document3'} className={classes.navItem}>
+                  <Typography>
+                    ADHD: Laptop Use.........................................................(11-10-2020)
+                  </Typography>
+                </MenuItem>
+                <hr></hr>
+                <MenuItem onClick={e => handleDocumentSelection(e, 'document4')} selected={document === 'document4'} className={classes.navItem}>
+                  <Typography>
+                    Depression: ES Animal..................................................(10-18-2020)
+                  </Typography>
+                </MenuItem>
+                <hr></hr>
+                <MenuItem onClick={e => handleDocumentSelection(e, 'document5')} selected={document === 'document5'} className={classes.navItem}>
+                  <Typography>
+                    Depression: Preferred Seating....................................(10-15-2020)
+                  </Typography>
+                </MenuItem>
+              </MenuList>
+
+            </div>
+            <div className={classes.buttonContainer}>
+              <div className={classes.accommodationsButton}>
+                <Link href="/home/mydocs/accommodations">
+                  <Button variant="contained"
+                    style={{
+                      width: 250,
+                      height: 50,
+                      backgroundColor: "#6681ff",
+                      textTransform: "none",
+                      color: 'white',
+                      borderRadius: 100,
+                    }}>
+                    <Typography variant='h6'>
+                      Apply Accommodations
+                    </Typography>
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -135,34 +216,22 @@ const useStyles = makeStyles((theme) => ({
             <Divider orientation="vertical" />
           </div>
 
-          <div className={classes.rightColumn}>
+          <div id="text" className={classes.rightColumn}>
             <Typography variant="h5">
               Exemption Request
+              <hr></hr>
             </Typography>
-            <p>
-            Dr. Ham,
-            <br></br>
-            1234 John Wy.
-            <br></br>
-            Los Angeles, CA 90045
-            <br></br>
-            <br></br>
-            To the DSS at Loyola Marymount University,
-            <br></br>
-            <br></br>
-            Raytheon Tole has been diagnosed with ADHD. I have discussed
-            <br></br>
-            the implications of this learning disability with him and have
-            <br></br>
-            determined that it is best for him to have the option to take
-            <br></br>
-            exams up to 48 hours later than the posted date.
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            - Dr. Hams
-            </p>
+            <div>
+              <div className={classes.scroller}>
+                Dr. Ham <br></br>
+                1234 John Wy. <br></br>
+                Los Angeles, CA 90045 <br></br><br></br>
+                To the DSS at Loyola Marymount University, <br></br><br></br>
+                {documentText}
+                <br></br><br></br><br></br>
+                - Dr. Ham
+              </div>
+            </div>
           </div>
         </div>
       </div>
