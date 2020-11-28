@@ -3,12 +3,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import MenuList from "@material-ui/core/MenuList"
 import MenuItem from "@material-ui/core/MenuItem"
 import Paper from "@material-ui/core/Paper"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
   defaultSetup: {
@@ -57,22 +52,31 @@ const MenuPanel = (props) => {
       <div className={classes.menuPanel}>
         <Paper className={classes.paper} elevation={3}>
           <MenuList className={classes.navigation}>
-            <Router>
+            <Link href="/home" className={classes.navItemFormat}>
               <MenuItem className={classes.navItem}>
-                <Link to ="/dashboard" className={classes.navItemFormat}>Dashboard</Link>
+                Dashboard
               </MenuItem>
+            </Link>
+            <Link href="/home/mydocs" className={classes.navItemFormat}>
               <MenuItem className={classes.navItem}>
-                <Link to ="/mydocs" className={classes.navItemFormat}>MyDocs</Link>
+                MyDocs
               </MenuItem>
+            </Link>
+            <Link href="/home/upload" className={classes.navItemFormat}>
               <MenuItem className={classes.navItem}>
-                <Link to ="/upload" className={classes.navItemFormat}>Upload Docs</Link>
+                Upload Docs
               </MenuItem>
+            </Link>
+            <Link href="/home/contact" className={classes.navItemFormat}>
               <MenuItem className={classes.navItem}>
-                <Link to ="/contact" className={classes.navItemFormat}>Contact Doctor</Link>
+                Contact Doctor
               </MenuItem>
+            </Link>
+            <Link href="/home/contact" className={classes.navItemFormat}>
               <MenuItem className={classes.navItem}>
-                <Link to ="/contact" className={classes.navItemFormat}>Contact DSS</Link>
+                Contact DSS
               </MenuItem>
+            </Link>
               {/* <Switch>
                   <Route path="/Dashboard">
                     <Dashboard />
@@ -84,7 +88,6 @@ const MenuPanel = (props) => {
                     <Home />
                   </Route>
               </Switch> */}
-            </Router>
           </MenuList>
         </Paper>
       </div>
