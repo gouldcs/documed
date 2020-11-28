@@ -42,7 +42,7 @@ const Logout = (props) => {
         <Typography style={{ fontSize: 36, }}>You have successfully signed out.</Typography>
       </div>
       <div className={classes.signBackIn}>
-            <Link href={"/Login"}>
+            <Link href={"/login"}>
                 <Button style={{ fontSize: 24, color: '#6681FF', textTransform: 'none', }}>Sign back in</Button>
             </Link>
       </div>

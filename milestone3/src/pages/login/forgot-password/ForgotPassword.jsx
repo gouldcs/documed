@@ -36,21 +36,21 @@ const useStyles = makeStyles(
             display: 'flex',
             margin: 'auto',
             textAlign: 'center',
-            marginTop: 10,
             marginBottom: 20,
         },
 
         buttonDiv: {
             display: 'flex',
+            margin: 'auto',
             marginTop: 20,
             marginBottom: 15
         },
 
         inputFields: {
             display: 'flex',
-            marginLeft: 50,
+            marginLeft: 30,
             marginBottom: 10,
-            marginRight: 50,
+            marginRight: 30,
         },
 
         callToAction: {
@@ -62,7 +62,7 @@ const useStyles = makeStyles(
         signUp: {
             display: 'flex',
             margin: 'auto',
-            marginBottom: 10,
+            marginBottom: 40,
         }
 
 
@@ -70,7 +70,7 @@ const useStyles = makeStyles(
 
 
 
-const SignIn = (props) => {
+const ForgotPassword = (props) => {
     const classes = useStyles(props);
 
     return (
@@ -79,12 +79,12 @@ const SignIn = (props) => {
                 <div className={classes.contentContainer}>
                     <div className={classes.heading}>
                         <Typography variant='h4'>
-                            Sign in to your DocuMed account
+                            Reset your password here
                         </Typography>
                     </div>
                     <div className={classes.inputFields}>
                         <Typography variant='h6'>
-                            Email
+                            New Password
                         </Typography>
                     </div>
                     <div className={classes.inputFields}>
@@ -93,25 +93,18 @@ const SignIn = (props) => {
                     </div>
                     <div className={classes.inputFields}>
                         <Typography variant='h6'>
-                            Password
+                            Reenter new Password
                         </Typography>
                     </div>
                     <div className={classes.inputFields}>
                         <TextField id="password" variant="filled" fullWidth>
                         </TextField>
                     </div>
-                    <div className={classes.inputFields}>
-                        <Typography variant='subtitle2' style={{ fontWeight: 'bold' }}>
-                            <Link href="/login/forgotpassword">
-                                Forgot password? Click here
-                            </Link>
-                        </Typography>
-                    </div>
                     <div className={classes.buttonDiv}>
-                        <Link href={"/home"}>
+                        <Link href={"/login"}>
                             <Button variant="contained"
                                 style={{
-                                    width: 400,
+                                    width: 200,
                                     margin: 'auto',
                                     height: 50,
                                     backgroundColor: "#6681ff",
@@ -124,18 +117,6 @@ const SignIn = (props) => {
                             </Button>
                         </Link>
                     </div>
-                    <div className={classes.callToAction}>
-                        <Typography variant='h6' style={{ margin: 'auto', }}>
-                            Don't have an account?
-                        </Typography>
-                    </div>
-                    <div className={classes.signUp}>
-                        <Link href='/'>
-                            <Typography variant='subtitle1' style={{ fontWeight: 'bold' }}>
-                                Sign up here!
-                            </Typography>
-                        </Link>
-                    </div>
                 </div>
             </div>
 
@@ -144,4 +125,4 @@ const SignIn = (props) => {
     )
 }
 
-export default SignIn;
+export default ForgotPassword;

@@ -156,7 +156,7 @@ const SignUpComponent = () => {
                     </Link>
                 </div>
                 <div className={classes.signInLink}>
-                    <Link href={`/Login`}>
+                    <Link href="/login">
                         <Typography variant="subtitle1" style={{color:'#6681ff', fontWeight:"bold"}}>
                             or Sign In
                         </Typography>
