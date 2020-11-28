@@ -8,6 +8,7 @@ import {
   Select,
   Typography,
   TextField,
+  Link,
 } from "@material-ui/core"
 
 const useStyles = makeStyles((theme) => ({
@@ -78,7 +79,9 @@ const ContactTemplate = (props) => {
         />
       </div>
       <div className={classes.button}>
-        <Button>Send</Button>
+          <Link href="/home">
+            <Button>Send</Button>
+          </Link>
       </div>
     </div>
   )

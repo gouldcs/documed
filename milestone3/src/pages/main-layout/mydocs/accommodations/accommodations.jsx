@@ -7,9 +7,10 @@ import Divider from '@material-ui/core/Divider';
 import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
-import MenuList from "@material-ui/core/MenuList"
-import MenuItem from "@material-ui/core/MenuItem"
-import { Typography } from "@material-ui/core"
+import MenuList from "@material-ui/core/MenuList";
+import MenuItem from "@material-ui/core/MenuItem";
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -145,34 +146,38 @@ const Accommodations = (props) => {
           </FormControl>
           <div className={classes.optionsContainer}>
             <div className={classes.optionButton}>
-              <Button variant="contained"
-                style={{
-                  width: 150,
-                  height: 50,
-                  backgroundColor: "#FF5E5E",
-                  textTransform: "none",
-                  color: 'white',
-                  borderRadius: 100,
-                }}>
-                <Typography variant='h6'>
-                  Cancel
-                    </Typography>
-              </Button>
+                <Link href="/home/mydocs">
+                    <Button variant="contained"
+                        style={{
+                        width: 150,
+                        height: 50,
+                        backgroundColor: "#FF5E5E",
+                        textTransform: "none",
+                        color: 'white',
+                        borderRadius: 100,
+                        }}>
+                        <Typography variant='h6'>
+                        Cancel
+                            </Typography>
+                    </Button>
+                </Link>
             </div>
             <div className={classes.optionButton}>
-              <Button variant="contained"
-                style={{
-                  width: 150,
-                  height: 50,
-                  backgroundColor: "#6681ff",
-                  textTransform: "none",
-                  color: 'white',
-                  borderRadius: 100,
-                }}>
-                <Typography variant='h6'>
-                  Done
-                </Typography>
-              </Button>
+                <Link href="/home/mydocs">
+                    <Button variant="contained"
+                        style={{
+                        width: 150,
+                        height: 50,
+                        backgroundColor: "#6681ff",
+                        textTransform: "none",
+                        color: 'white',
+                        borderRadius: 100,
+                        }}>
+                        <Typography variant='h6'>
+                        Done
+                        </Typography>
+                    </Button>
+                </Link>
             </div>
           </div>
         </div>

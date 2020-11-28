@@ -7,6 +7,7 @@ import Header from "../../components/Header";
 import MenuPanel from "../../components/MenuPanel";
 import Dashboard from "./dashboard/Dashboard";
 import MyDocs from "./mydocs/MyDocs";
+import Accommodations from "./mydocs/accommodations/Accommodations";
 import Upload from "./upload/Upload";
 import DoctorContact from "./contact/DoctorContact";
 import DSSContact from "./contact/DSSContact";
@@ -101,8 +102,11 @@ const MainLayout = (props) => {
                         <Route exact path="/home">
                             <Dashboard />
                         </Route>
-                        <Route path="/home/mydocs">
+                        <Route exact path="/home/mydocs">
                             <MyDocs />
+                        </Route>
+                        <Route exact path="/home/mydocs/accommodations">
+                            <Accommodations />
                         </Route>
                         <Route path="/home/upload">
                             <Upload />

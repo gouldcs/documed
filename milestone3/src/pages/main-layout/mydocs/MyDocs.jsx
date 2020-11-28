@@ -3,9 +3,10 @@ import { makeStyles } from "@material-ui/core/styles"
 
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
-import MenuList from "@material-ui/core/MenuList"
-import MenuItem from "@material-ui/core/MenuItem"
-import { Typography } from "@material-ui/core"
+import MenuList from "@material-ui/core/MenuList";
+import MenuItem from "@material-ui/core/MenuItem";
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
     /// Main page container
@@ -15,13 +16,13 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: 50,
       paddingBottom: 50,
     },
-  
+
     dashboardContent: {
       display: "flex",
       flexDirection: "row",
       paddingLeft: 50,
     },
-  
+
     leftColumn: {
       display: "flex",
       flexDirection: "column",
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     navItem: {
       padding: 20
     },
-  
+
     centerColumn: {
       display: "flex",
       flexDirection: "column",
@@ -62,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom: 10,
       paddingLeft: 100,
     },
-  
+
     optionButton: {
       paddingTop: 100,
       paddingLeft: 150,
@@ -72,27 +73,27 @@ const useStyles = makeStyles((theme) => ({
     dividerStyle: {
       paddingLeft: 20,
     }
-  
+
   }))
-  
+
   const MyDocs = (props) => {
     const classes = useStyles(props)
-  
+
     const [document, selectDocument] = useState('document1')
-  
+
     const handleDocumentSelection = (event, c) => {
       selectDocument(c)
       console.log(document === 'document1')
     }
-  
 
-  
+
+
     return (
       <div className={classes.root}>
         <div className={classes.dashboardContent}>
           <div className={classes.leftColumn}>
             <Typography variant="h5">
-              Select Document:                            
+              Select Document:
               <hr></hr>
             </Typography>
             <MenuList className={classes.navigation}>
@@ -111,19 +112,21 @@ const useStyles = makeStyles((theme) => ({
             </MenuList>
             <div className={classes.optionContainer}>
               <div className={classes.optionButton}>
-                <Button variant="contained"
-                  style={{
-                    width: 400,
-                    height: 50,
-                    backgroundColor: "#6681ff",
-                    textTransform: "none",
-                    color: 'white',
-                    borderRadius: 100,
-                  }}>
-                  <Typography variant='h6'>
-                    Apply Accommodations
-                  </Typography>
-                </Button>
+                    <Link href="/home/mydocs/accommodations">
+                        <Button variant="contained"
+                        style={{
+                            width: 400,
+                            height: 50,
+                            backgroundColor: "#6681ff",
+                            textTransform: "none",
+                            color: 'white',
+                            borderRadius: 100,
+                        }}>
+                            <Typography variant='h6'>
+                                Apply Accommodations
+                            </Typography>
+                        </Button>
+                    </Link>
               </div>
             </div>
           </div>
@@ -137,17 +140,17 @@ const useStyles = makeStyles((theme) => ({
               Exemption Request
             </Typography>
             <p>
-            Dr. Ham, 
+            Dr. Ham,
             <br></br>
-            1234 John Wy. 
+            1234 John Wy.
             <br></br>
-            Los Angeles, CA 90045 
+            Los Angeles, CA 90045
             <br></br>
             <br></br>
             To the DSS at Loyola Marymount University,
             <br></br>
             <br></br>
-            Raytheon Tole has been diagnosed with ADHD. I have discussed 
+            Raytheon Tole has been diagnosed with ADHD. I have discussed
             <br></br>
             the implications of this learning disability with him and have
             <br></br>
