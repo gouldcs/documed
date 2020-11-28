@@ -79,7 +79,7 @@ const ForgotPassword = (props) => {
                 <div className={classes.contentContainer}>
                     <div className={classes.heading}>
                         <Typography variant='h4'>
-                            Reset your password here
+                            Resetting Your Password
                         </Typography>
                     </div>
                     <div className={classes.inputFields}>
@@ -107,12 +107,12 @@ const ForgotPassword = (props) => {
                                     width: 200,
                                     margin: 'auto',
                                     height: 50,
-                                    backgroundColor: "#6681ff",
+                                    backgroundColor: "#FF6161",
                                     textTransform: "none",
-                                    color: 'white'
+                                    color: 'white',
                                 }}>
                                 <Typography variant='h6'>
-                                    Sign In
+                                    Reset Password
                                 </Typography>
                             </Button>
                         </Link>
