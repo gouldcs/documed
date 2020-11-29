@@ -1,12 +1,16 @@
 import React from "react"
+
 import { makeStyles } from "@material-ui/core/styles"
-import AppBar from "@material-ui/core/AppBar"
+
+import {
+  AppBar,
+  IconButton,
+  Toolbar,
+  Typography,
+  Link,
+} from "@material-ui/core"
+
 import ExitToAppIcon from "@material-ui/icons/ExitToApp"
-import IconButton from "@material-ui/core/IconButton"
-import SettingsIcon from "@material-ui/icons/Settings"
-import Toolbar from "@material-ui/core/Toolbar"
-import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -21,11 +25,7 @@ const useStyles = makeStyles(
     },
 
     centeredTitle: {
-      //display: "flex",
-      //flex: 1,
-      //flexGrow: 1,
       fontWeight: "bold",
-      //alignSelf: "center",
       color: "#FFFFFF",
       paddingTop: 10,
       paddingBottom: 10,
@@ -40,9 +40,7 @@ const useStyles = makeStyles(
     title: {
       display: "flex",
       flex: 1,
-      //flexGrow: 1,
       fontWeight: "bold",
-      //alignSelf: "center",
       color: "#FFFFFF",
       paddingTop: 10,
       paddingBottom: 10,
@@ -64,35 +62,36 @@ const Header = (props) => {
   let toReturn = ""
 
   if (props.text === "DocuMed" || props.text === "Welcome to DocuMed") {
-    toReturn = (<div className={classes.root}>
-      <AppBar position="static" style={{ background: "#1F5780",}}>
-        <Toolbar>
-          <div className={classes.centeredTitle}>
-            <Typography variant="h3" className={classes.centeredTitleText}>
-              {props.text}
-            </Typography>
-          </div>
-        </Toolbar>
-      </AppBar>
-    </div>)
+    toReturn = (
+      <div className={classes.root}>
+        <AppBar position="static" style={{ background: "#1F5780" }}>
+          <Toolbar>
+            <div className={classes.centeredTitle}>
+              <Typography variant="h3" className={classes.centeredTitleText}>
+                {props.text}
+              </Typography>
+            </div>
+          </Toolbar>
+        </AppBar>
+      </div>
+    )
   } else {
-    toReturn = (<div className={classes.root}>
-      <AppBar position="static" style={{ background: "#1F5780", }}>
-        <Toolbar>
-          <Typography variant="h3" className={classes.title}>
-            DocuMed
-         </Typography>
-          <IconButton size="medium" className={classes.settings}>
-            <SettingsIcon />
-          </IconButton>
-          <Link href={"/Logout"}>
-            <IconButton size="medium" edge="end" className={classes.logout}>
+    toReturn = (
+      <div className={classes.root}>
+        <AppBar position="static" style={{ background: "#1F5780" }}>
+          <Toolbar>
+            <Typography variant="h3" className={classes.title}>
+              DocuMed
+            </Typography>
+            <Link href={"/Logout"}>
+              <IconButton size="medium" edge="end" className={classes.logout}>
                 <ExitToAppIcon />
-            </IconButton>
-          </Link>
-        </Toolbar>
-      </AppBar>
-    </div>)
+              </IconButton>
+            </Link>
+          </Toolbar>
+        </AppBar>
+      </div>
+    )
   }
 
   return toReturn

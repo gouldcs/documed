@@ -1,21 +1,21 @@
 import React, { useState } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
-import Button from '@material-ui/core/Button';
-import Checkbox from '@material-ui/core/Checkbox';
-import Divider from '@material-ui/core/Divider';
-import FormControl from '@material-ui/core/FormControl';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
-import MenuList from "@material-ui/core/MenuList";
-import MenuItem from "@material-ui/core/MenuItem";
-import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
+import Button from "@material-ui/core/Button"
+import Checkbox from "@material-ui/core/Checkbox"
+import Divider from "@material-ui/core/Divider"
+import FormControl from "@material-ui/core/FormControl"
+import FormControlLabel from "@material-ui/core/FormControlLabel"
+import FormGroup from "@material-ui/core/FormGroup"
+import MenuList from "@material-ui/core/MenuList"
+import MenuItem from "@material-ui/core/MenuItem"
+import Typography from "@material-ui/core/Typography"
+import Link from "@material-ui/core/Link"
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
-    height: '90%',
+    width: "100%",
+    height: "90%",
     paddingTop: 50,
     paddingBottom: 50,
   },
@@ -68,42 +68,57 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 10,
     paddingRight: 25,
   },
-
 }))
 
 const Accommodations = (props) => {
   const classes = useStyles(props)
 
-  const [course, selectCourse] = useState('course1')
+  const [course, selectCourse] = useState("course1")
 
   const handleCourseSelection = (event, c) => {
     selectCourse(c)
-    console.log(course === 'course1')
+    console.log(course === "course1")
   }
-
-  // let accommodationsApplied = { 'accommodation1': true, 'accommodation2': true, 'accommodation3': true, 'accommodation4': false, 'accommodation5': false }
 
   return (
     <div className={classes.root}>
       <div className={classes.dashboardContent}>
         <div className={classes.leftColumn}>
-          <Typography variant="h5">
-            Select Class:
-          </Typography>
+          <Typography variant="h5">Select Class:</Typography>
           <MenuList className={classes.navigation}>
-            <MenuItem onClick={e => handleCourseSelection(e, 'course1')} selected={course === 'course1'} className={classes.navItem}>
+            <MenuItem
+              onClick={(e) => handleCourseSelection(e, "course1")}
+              selected={course === "course1"}
+              className={classes.navItem}
+            >
               <Typography>CMSI 485</Typography>
             </MenuItem>
-            <MenuItem onClick={e => handleCourseSelection(e, 'course2')} selected={course === 'course2'} className={classes.navItem}>
+            <MenuItem
+              onClick={(e) => handleCourseSelection(e, "course2")}
+              selected={course === "course2"}
+              className={classes.navItem}
+            >
               <Typography>CMSI 370</Typography>
             </MenuItem>
-            <MenuItem onClick={e => handleCourseSelection(e, 'course3')} selected={course === 'course3'} className={classes.navItem}>
+            <MenuItem
+              onClick={(e) => handleCourseSelection(e, "course3")}
+              selected={course === "course3"}
+              className={classes.navItem}
+            >
               <Typography>CMSI 385</Typography>
             </MenuItem>
-            <MenuItem onClick={e => handleCourseSelection(e, 'course4')} selected={course === 'course4'} className={classes.navItem}>
+            <MenuItem
+              onClick={(e) => handleCourseSelection(e, "course4")}
+              selected={course === "course4"}
+              className={classes.navItem}
+            >
               <Typography>CMSI 386</Typography>
             </MenuItem>
-            <MenuItem onClick={e => handleCourseSelection(e, 'course5')} selected={course === 'course5'} className={classes.navItem}>
+            <MenuItem
+              onClick={(e) => handleCourseSelection(e, "course5")}
+              selected={course === "course5"}
+              className={classes.navItem}
+            >
               <Typography>CMSI 482</Typography>
             </MenuItem>
           </MenuList>
@@ -112,11 +127,9 @@ const Accommodations = (props) => {
           <Divider orientation="vertical" flexItem />
         </div>
         <div className={classes.rightColumn}>
-          <Typography variant="h5">
-            Select Accommodations:
-          </Typography>
+          <Typography variant="h5">Select Accommodations:</Typography>
           <FormControl component="fieldset">
-            <FormGroup aria-label="position" column style={{ paddingLeft: 20, }}>
+            <FormGroup aria-label="position" column style={{ paddingLeft: 20 }}>
               <FormControlLabel
                 // checked={accommodationsApplied['accommodation1']}
                 value="top"
@@ -146,38 +159,38 @@ const Accommodations = (props) => {
           </FormControl>
           <div className={classes.optionsContainer}>
             <div className={classes.optionButton}>
-                <Link href="/home/mydocs">
-                    <Button variant="contained"
-                        style={{
-                        width: 150,
-                        height: 50,
-                        backgroundColor: "#FF5E5E",
-                        textTransform: "none",
-                        color: 'white',
-                        borderRadius: 100,
-                        }}>
-                        <Typography variant='h6'>
-                        Cancel
-                            </Typography>
-                    </Button>
-                </Link>
+              <Link href="/home/mydocs">
+                <Button
+                  variant="contained"
+                  style={{
+                    width: 150,
+                    height: 50,
+                    backgroundColor: "#FF5E5E",
+                    textTransform: "none",
+                    color: "white",
+                    borderRadius: 100,
+                  }}
+                >
+                  <Typography variant="h6">Cancel</Typography>
+                </Button>
+              </Link>
             </div>
             <div className={classes.optionButton}>
-                <Link href="/home/mydocs">
-                    <Button variant="contained"
-                        style={{
-                        width: 150,
-                        height: 50,
-                        backgroundColor: "#6681ff",
-                        textTransform: "none",
-                        color: 'white',
-                        borderRadius: 100,
-                        }}>
-                        <Typography variant='h6'>
-                        Done
-                        </Typography>
-                    </Button>
-                </Link>
+              <Link href="/home/mydocs">
+                <Button
+                  variant="contained"
+                  style={{
+                    width: 150,
+                    height: 50,
+                    backgroundColor: "#6681ff",
+                    textTransform: "none",
+                    color: "white",
+                    borderRadius: 100,
+                  }}
+                >
+                  <Typography variant="h6">Done</Typography>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
