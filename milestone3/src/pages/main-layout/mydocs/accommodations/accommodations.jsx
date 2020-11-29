@@ -131,7 +131,6 @@ const Accommodations = (props) => {
           <FormControl component="fieldset">
             <FormGroup aria-label="position" column style={{ paddingLeft: 20 }}>
               <FormControlLabel
-                // checked={accommodationsApplied['accommodation1']}
                 value="top"
                 control={<Checkbox color="primary" />}
                 label="1.5x Time on Exams"

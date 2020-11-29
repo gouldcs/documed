@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
       (
         <Fragment>
           <div>
-            Raytheon Tole has been diagnosed with ADHD. I have discussed 
+            John Doe has been diagnosed with ADHD. I have discussed 
             the implications of this learning disability with him and have
             determined that it is best for him to have the option to take
             exams up to 48 hours later than the posted date.
@@ -94,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
       ), (
         <Fragment>
           <div>
-            Raytheon Tole has been diagnosed with ADHD. I have discussed 
+            John Doe has been diagnosed with ADHD. I have discussed 
             the implications of this learning disability with him and have 
             determined that it is best for him to have access to recorded 
             lectures before, during, and after the date the lecture will 
@@ -104,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
       ), (
         <Fragment>
           <div>
-            Raytheon Tole has been diagnosed with ADHD. I have discussed the 
+            John Doe has been diagnosed with ADHD. I have discussed the 
             implications of this learning disability with him and have 
             determined that it is best for him to continuously use his laptop 
             for educational purposes during class. 
@@ -113,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
       ), (
         <Fragment>
           <div>
-            Raytheon Tole has been diagnosed with Depression. I have discussed the 
+            John Doe has been diagnosed with Depression. I have discussed the 
             implications of this learning disability with him and have 
             determined the presence of his emotional support animal is 
             mandatory and give him clearance to bring his animal to class.
@@ -123,7 +123,7 @@ const useStyles = makeStyles((theme) => ({
       (
         <Fragment>
           <div>
-            Raytheon Tole has been diagnosed with Depression. I have discussed the 
+            John Doe has been diagnosed with Depression. I have discussed the 
             implications of this learning disability with him and have determined 
             that it would be best if he were allowed to have a reserved seat close 
             to the door and preferably in the back of the classroom. It is imperative
