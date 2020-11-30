@@ -1,8 +1,8 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import DocuMedDescription from "./signup-components/DocuMedDescription"
-import SignUpComponent from "./signup-components/SignUpComponent"
 import Header from "../../components/Header"
+import SignUpComponent from "./signup-components/SignUpComponent"
 
 const useStyles = makeStyles(
   (theme) => ({
