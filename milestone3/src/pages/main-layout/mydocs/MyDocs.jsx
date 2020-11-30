@@ -165,59 +165,35 @@ const useStyles = makeStyles((theme) => ({
         <div className={classes.dashboardContent}>
           <div className={classes.leftColumn}>
             <div className={classes.leftHeader}>
-              <Typography variant="h5">
-                Select Document:  
-              </Typography>
-              <Typography variant="h5">
-                Date:
-              </Typography>
+              <Typography variant="h5">Select Document:  </Typography>
+              <Typography variant="h5">Date: </Typography>
             </div>
             <div>
               <hr color="black"></hr>                          
               <MenuList className={classes.docScroller}>
                 <MenuItem onClick={e => handleDocumentSelection(e, 'document1')} selected={document === 'document1'} className={classes.navItem}>
-                  <Typography>
-                    ADHD: Late Tests
-                  </Typography>
-                  <Typography>
-                    11-21-2020
-                  </Typography>
+                  <Typography>ADHD: Late Tests</Typography>
+                  <Typography>11-21-2020</Typography>
                 </MenuItem>
                 <hr></hr>
                 <MenuItem onClick={e => handleDocumentSelection(e, 'document2')} selected={document === 'document2'} className={classes.navItem}>
-                  <Typography>
-                    ADHD: Recorded Lectures
-                  </Typography>
-                  <Typography>
-                    11-12-2020
-                  </Typography>
+                  <Typography>ADHD: Recorded Lectures</Typography>
+                  <Typography>11-12-2020</Typography>
                 </MenuItem>
                 <hr></hr>
                 <MenuItem onClick={e => handleDocumentSelection(e, 'document3')} selected={document === 'document3'} className={classes.navItem}>
-                  <Typography>
-                    ADHD: Laptop Use
-                  </Typography>
-                  <Typography>
-                    11-10-2020
-                  </Typography>
+                  <Typography>ADHD: Laptop Use</Typography>
+                  <Typography>11-10-2020</Typography>
                 </MenuItem>
                 <hr></hr>
                 <MenuItem onClick={e => handleDocumentSelection(e, 'document4')} selected={document === 'document4'} className={classes.navItem}>
-                  <Typography>
-                    Depression: ES Animal
-                  </Typography>
-                  <Typography>
-                    10-18-2020
-                  </Typography>
+                  <Typography>Depression: ES Animal</Typography>
+                  <Typography>10-18-2020</Typography>
                 </MenuItem>
                 <hr></hr>
                 <MenuItem onClick={e => handleDocumentSelection(e, 'document5')} selected={document === 'document5'} className={classes.navItem}>
-                  <Typography>
-                    Depression: Preferred Seating
-                  </Typography>
-                  <Typography>
-                    10-15-2020
-                  </Typography>
+                  <Typography>Depression: Preferred Seating</Typography>
+                  <Typography>10-15-2020</Typography>
                 </MenuItem>
               </MenuList>
 
