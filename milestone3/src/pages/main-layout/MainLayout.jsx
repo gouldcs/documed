@@ -2,17 +2,18 @@ import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
 import Paper from "@material-ui/core/Paper"
+import Typography from "@material-ui/core/Typography"
 
-import Header from "../../components/Header"
-import MenuPanel from "../../components/MenuPanel"
-import Dashboard from "./dashboard/Dashboard"
-import MyDocs from "./mydocs/MyDocs"
 import Accommodations from "./mydocs/accommodations/Accommodations"
-import Upload from "./upload/Upload"
+import Dashboard from "./dashboard/Dashboard"
 import DoctorContact from "./contact/DoctorContact"
 import DSSContact from "./contact/DSSContact"
-import Typography from "@material-ui/core/Typography"
-import { Switch, Route } from "react-router-dom"
+import Header from "../../components/Header"
+import MenuPanel from "../../components/MenuPanel"
+import MyDocs from "./mydocs/MyDocs"
+import Upload from "./upload/Upload"
+
+import { Switch, Route, useLocation } from "react-router-dom"
 
 const useStyles = makeStyles((theme) => ({
   dashboard: {
@@ -77,6 +78,22 @@ const useStyles = makeStyles((theme) => ({
 
 const MainLayout = (props) => {
   const classes = useStyles(props)
+  let location = useLocation()
+
+  const setTitle = (loc) => {
+    if (loc.pathname === "/home") {
+      return "Dashboard"
+    } else if (loc.pathname === "/home/mydocs") {
+      return "MyDocs"
+    } else if (loc.pathname === "/home/upload") {
+      return "Upload Documents"
+    } else if (loc.pathname === "/home/contactDoc") {
+      return "Contact Doctor"
+    } else if (loc.pathname === "/home/contactDSS") {
+      return "Contact DSS"
+    }
+    return loc.pathname
+  }
 
   return (
     <div className={classes.dashboard}>
@@ -88,7 +105,7 @@ const MainLayout = (props) => {
           <div className={classes.empty}></div>
           <div className={classes.pageTitle}>
             <div className={classes.title}>
-              <Typography variant="h5">Dashboard</Typography>
+              <Typography variant="h4">{setTitle(location)}</Typography>
             </div>
           </div>
         </div>
