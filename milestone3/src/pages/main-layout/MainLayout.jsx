@@ -85,6 +85,8 @@ const MainLayout = (props) => {
       return "Dashboard"
     } else if (loc.pathname === "/home/mydocs") {
       return "MyDocs"
+    } else if (loc.pathname === "/home/mydocs/accommodations") {
+      return "MyDocs > Accommodations"
     } else if (loc.pathname === "/home/upload") {
       return "Upload Documents"
     } else if (loc.pathname === "/home/contactDoc") {
