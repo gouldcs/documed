@@ -3,10 +3,10 @@ import { makeStyles } from "@material-ui/core/styles"
 
 import Button from '@material-ui/core/Button'
 import Divider from '@material-ui/core/Divider'
-import Link from "@material-ui/core/Link"
 import MenuList from "@material-ui/core/MenuList"
 import MenuItem from "@material-ui/core/MenuItem"
 import { Typography } from "@material-ui/core"
+import Link from "@material-ui/core/Link"
 
 const useStyles = makeStyles((theme) => ({
 
@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       flexDirection: "row",
       paddingLeft: 50,
+      paddingRight: 50,
     },
   
     leftColumn: {
@@ -29,13 +30,16 @@ const useStyles = makeStyles((theme) => ({
     },
 
     leftHeader: {
-      display:"flex",
-      flexDirection:"row",
+      display: "flex",
+      paddingBottom: 5,
+      flexDirection: "row",
       justifyContent: "space-between",
     },
 
     navItem: {
-      padding: 20,
+      padding: 5,
+      paddingTop: 15,
+      paddingBottom: 15,
       justifyContent: "space-between",
     },
   
@@ -65,9 +69,9 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom: 25,
       fontWeight: "regular",
       color: "#000000",
-      backgroundColor: "#efefef",
+      backgroundColor: "#e7e7e7",
       textDecoration: "none",
-      height: 265,
+      height: 360,
       overflow: "auto"
     },
 
@@ -76,15 +80,15 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "row",
       paddingTop: 50,
       paddingBottom: 10,
-      paddingLeft: 50,
-      paddingRight: 50,
+      paddingLeft: 25,
+      paddingRight: 25,
     },
   
     accommodationsButton: {
       display: "flex",
       flexDirection: "row",
-      paddingLeft: 50,
-      paddingRight: 50,
+      paddingLeft: 25,
+      paddingRight: 25,
     },
   
   }))
@@ -235,7 +239,7 @@ const useStyles = makeStyles((theme) => ({
                 Los Angeles, CA 90045 <br></br><br></br>
                 To the DSS at Loyola Marymount University, <br></br><br></br>
                 {documentText}
-                <br></br><br></br><br></br>
+                <br></br><br></br>
                 - Dr. Ham
               </Typography>
             </div>
@@ -246,3 +250,4 @@ const useStyles = makeStyles((theme) => ({
   }
 
 export default MyDocs
+
