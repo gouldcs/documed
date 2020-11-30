@@ -69,7 +69,7 @@ const Upload = (props) => {
             />
           </div>
           <div className={classes.topRowItem}>
-            <Typography style={{fontSize: 14,alignSelf: "center",color:"#FF5E5E"}}>
+            <Typography style={{fontSize: 14,alignSelf: "center",color:"#6681ff"}}>
               *All uploaded documents can be found in MyDocs*
             </Typography>
           </div>

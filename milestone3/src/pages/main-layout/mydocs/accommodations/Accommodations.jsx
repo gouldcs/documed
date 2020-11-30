@@ -1,16 +1,13 @@
 import React, { useState } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
+import AccommodationsCheckboxes from "./AccommodationsCheckboxes"
 import Button from "@material-ui/core/Button"
-import Checkbox from "@material-ui/core/Checkbox"
 import Divider from "@material-ui/core/Divider"
-import FormControl from "@material-ui/core/FormControl"
-import FormControlLabel from "@material-ui/core/FormControlLabel"
-import FormGroup from "@material-ui/core/FormGroup"
+import Link from "@material-ui/core/Link"
 import MenuList from "@material-ui/core/MenuList"
 import MenuItem from "@material-ui/core/MenuItem"
 import Typography from "@material-ui/core/Typography"
-import Link from "@material-ui/core/Link"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -127,35 +124,7 @@ const Accommodations = (props) => {
           <Divider orientation="vertical" flexItem />
         </div>
         <div className={classes.rightColumn}>
-          <Typography variant="h5">Select Accommodations:</Typography>
-          <FormControl component="fieldset">
-            <FormGroup aria-label="position" column style={{ paddingLeft: 20 }}>
-              <FormControlLabel
-                value="top"
-                control={<Checkbox color="primary" />}
-                label="1.5x Time on Exams"
-                labelPlacement="end"
-              />
-              <FormControlLabel
-                value="top"
-                control={<Checkbox color="primary" />}
-                label="Frequent Breaks"
-                labelPlacement="end"
-              />
-              <FormControlLabel
-                value="top"
-                control={<Checkbox color="primary" />}
-                label="Recorded Lectures"
-                labelPlacement="end"
-              />
-              <FormControlLabel
-                value="top"
-                control={<Checkbox color="primary" />}
-                label="Emotional Support Animal"
-                labelPlacement="end"
-              />
-            </FormGroup>
-          </FormControl>
+          <AccommodationsCheckboxes />
           <div className={classes.optionsContainer}>
             <div className={classes.optionButton}>
               <Link href="/home/mydocs">
