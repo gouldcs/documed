@@ -1,3 +1,11 @@
+# DocuMed Milestone 3
+
+#### Authors: Amanda Marques, Cameron Gould, Jonathan Yeh, Michael Reza
+
+## Important Note
+
+You can find our document containing the rest of the Milestone 3 requirements in the doc folder.
+
 # Quickstart guide
 
 ## MacOS Important Note
@@ -18,13 +26,14 @@ Alternatively, you can download Node.js from a pre-built installer via the [Node
 
 ## Install Yarn
 
-You can install yarn on your **Mac** device by opening terminal and entering `$ brew install yarn`. 
+You can install yarn on your **Mac** device by opening terminal and entering `$ brew install yarn`.
 
 If on **Windows**, open CMD and use Chocolatey: `choco install yarn` or Scoop: `scoop install yarn`.
 
 If you would like alternative installation options for either OS, you can visit the installation page [here](https://classic.yarnpkg.com/en/docs/install/#windows-stable).
 
 ---
+
 ## Adding Storybook
 
 Storybook is a useful tool that allows you to preview the construction of front-end components before adding them to the final product. It is something that we use throughout our design process regularly, so it's important to get it working.
@@ -42,4 +51,3 @@ We've experienced some issues in the past with Storybook regarding some Material
 `yarn add @material-ui/core`
 
 `yarn add @material-ui/icons`
-
