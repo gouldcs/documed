@@ -26,11 +26,17 @@ const useStyles = makeStyles((theme) => ({
     leftColumn: {
       display: "flex",
       flexDirection: "column",
+    },
 
+    leftHeader: {
+      display:"flex",
+      flexDirection:"row",
+      justifyContent: "space-between",
     },
 
     navItem: {
-      padding: 20
+      padding: 20,
+      justifyContent: "space-between",
     },
   
     centerColumn: {
@@ -45,21 +51,24 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column",
     },
 
-    scroller: {
-      fontSize: 22,
+    docScroller: {
+      fontSize: 23,
       height: 300,
-      overflow:'auto',
+      overflow: "auto",
     },
 
-    textContainer: {
-      fontSize: 22,
+    textScroller: {
+      fontSize: 23,
       paddingLeft: 35,
       paddingRight: 25,
-      paddingTop: 10,
+      paddingTop: 25,
+      paddingBottom: 25,
       fontWeight: "regular",
       color: "#000000",
       backgroundColor: "#efefef",
       textDecoration: "none",
+      height: 265,
+      overflow: "auto"
     },
 
     buttonContainer: {
@@ -67,11 +76,13 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "row",
       paddingTop: 50,
       paddingBottom: 10,
-      paddingLeft: 100,
-      paddingRight: 100,
+      paddingLeft: 50,
+      paddingRight: 50,
     },
   
     accommodationsButton: {
+      display: "flex",
+      flexDirection: "row",
       paddingLeft: 50,
       paddingRight: 50,
     },
@@ -153,40 +164,36 @@ const useStyles = makeStyles((theme) => ({
       <div className={classes.root}>
         <div className={classes.dashboardContent}>
           <div className={classes.leftColumn}>
-            <Typography variant="h5">
-              Select Document:  
-              <hr></hr>                          
-            </Typography>
+            <div className={classes.leftHeader}>
+              <Typography variant="h5">Select Document:  </Typography>
+              <Typography variant="h5">Date: </Typography>
+            </div>
             <div>
-              <MenuList className={classes.navigation, classes.scroller}>
+              <hr color="black"></hr>                          
+              <MenuList className={classes.docScroller}>
                 <MenuItem onClick={e => handleDocumentSelection(e, 'document1')} selected={document === 'document1'} className={classes.navItem}>
-                  <Typography>
-                    ADHD: Late Tests...........................................................(11-21-2020)
-                  </Typography>
+                  <Typography>ADHD: Late Tests</Typography>
+                  <Typography>11-21-2020</Typography>
                 </MenuItem>
                 <hr></hr>
                 <MenuItem onClick={e => handleDocumentSelection(e, 'document2')} selected={document === 'document2'} className={classes.navItem}>
-                  <Typography>
-                    ADHD: Recorded Lectures.............................................(11-12-2020)
-                  </Typography>
+                  <Typography>ADHD: Recorded Lectures</Typography>
+                  <Typography>11-12-2020</Typography>
                 </MenuItem>
                 <hr></hr>
                 <MenuItem onClick={e => handleDocumentSelection(e, 'document3')} selected={document === 'document3'} className={classes.navItem}>
-                  <Typography>
-                    ADHD: Laptop Use.........................................................(11-10-2020)
-                  </Typography>
+                  <Typography>ADHD: Laptop Use</Typography>
+                  <Typography>11-10-2020</Typography>
                 </MenuItem>
                 <hr></hr>
                 <MenuItem onClick={e => handleDocumentSelection(e, 'document4')} selected={document === 'document4'} className={classes.navItem}>
-                  <Typography>
-                    Depression: ES Animal..................................................(10-18-2020)
-                  </Typography>
+                  <Typography>Depression: ES Animal</Typography>
+                  <Typography>10-18-2020</Typography>
                 </MenuItem>
                 <hr></hr>
                 <MenuItem onClick={e => handleDocumentSelection(e, 'document5')} selected={document === 'document5'} className={classes.navItem}>
-                  <Typography>
-                    Depression: Preferred Seating....................................(10-15-2020)
-                  </Typography>
+                  <Typography>Depression: Preferred Seating</Typography>
+                  <Typography>10-15-2020</Typography>
                 </MenuItem>
               </MenuList>
 
@@ -213,16 +220,16 @@ const useStyles = makeStyles((theme) => ({
           </div>
 
           <div className={classes.centerColumn}>
-            <Divider orientation="vertical" />
+            <Divider orientation="vertical"/>
           </div>
 
-          <div id="text" className={classes.rightColumn}>
+          <div className={classes.rightColumn}>
             <Typography variant="h5">
               Exemption Request
-              <hr></hr>
+              <hr color="black"></hr>
             </Typography>
-            <div>
-              <div className={classes.scroller}>
+            <div className={classes.textScroller}>
+              <Typography variant="h6">
                 Dr. Ham <br></br>
                 1234 John Wy. <br></br>
                 Los Angeles, CA 90045 <br></br><br></br>
@@ -230,7 +237,7 @@ const useStyles = makeStyles((theme) => ({
                 {documentText}
                 <br></br><br></br><br></br>
                 - Dr. Ham
-              </div>
+              </Typography>
             </div>
           </div>
         </div>
