@@ -24,20 +24,17 @@ const useStyles = makeStyles(
 
         input: {
             display: 'flex',
-            flexDirection: 'row',
-        },
-
-        inputColumnLeft: {
-            display: 'flex',
-            margin: 'auto',
             flexDirection: 'column',
-            marginRight: 20,
         },
 
-        inputColumnRight: {
-            margin: 'auto',
+        inputGroup: {
             display: 'flex',
-            flexDirection:'column',
+            flexDirection: 'column',
+            width: 250,
+        },
+
+        inputRow: {
+            display: 'flex',
         },
 
         inputTitle: {
@@ -48,7 +45,7 @@ const useStyles = makeStyles(
         inputField: {
             display: 'flex',
             marginBottom: 25,
-            width: 250,
+            width: 200,
         },
 
         buttonDiv: {
@@ -74,70 +71,84 @@ const SignUpComponent = () => {
 
                 <div className={classes.input}>
 
-                    <div className={classes.inputColumnLeft}>
-
-                        <div className={classes.inputTitle}>
-                            <Typography variant="h6">
-                                First Name:
-                            </Typography>
-                        </div>
-                        <div className={classes.inputField}>
-                            <TextField variant="filled" fullWidth>
-                            </TextField>
-                        </div>
-
-                        <div className={classes.inputTitle}>
-                            <Typography variant="h6">
-                                School or University:
-                            </Typography>
-                        </div>
-                        <div className={classes.inputField}>
-                            <TextField variant="filled"  fullWidth>
-                            </TextField>
+                    <div className={classes.inputRow}>
+                        <div className={classes.inputGroup}>
+                            <div className={classes.inputTitle}>
+                                <Typography variant="h6">
+                                    First Name:
+                                </Typography>
+                            </div>
+                            <div className={classes.inputField}>
+                                <TextField variant="filled" fullWidth>
+                                </TextField>
+                            </div>
                         </div>
 
-                        <div className={classes.inputTitle}>
-                            <Typography variant="h6">
-                                Password:
-                            </Typography>
-                        </div>
-                        <div className={classes.inputField}>
-                            <TextField variant="filled" fullWidth>
-                            </TextField>
+                        <div className={classes.inputGroup}>
+                            <div className={classes.inputTitle}>
+                                <Typography variant="h6">
+                                    Last Name:
+                                </Typography>
+                            </div>
+                            <div className={classes.inputField}>
+                                <TextField variant="filled" fullWidth>
+                                </TextField>
+                            </div>
                         </div>
                     </div>
 
-                    <div className={classes.inputColumnRight}>
-                        <div className={classes.inputTitle}>
-                            <Typography variant="h6">
-                                Last Name:
-                            </Typography>
-                        </div>
-                        <div className={classes.inputField}>
-                            <TextField variant="filled" fullWidth>
-                            </TextField>
-                        </div>
-
-                        <div className={classes.inputTitle}>
-                            <Typography variant="h6">
-                                Email:
-                            </Typography>
-                        </div>
-                        <div className={classes.inputField}>
-                            <TextField variant="filled" fullWidth>
-                            </TextField>
+                    <div className={classes.inputRow}>
+                        <div className={classes.inputGroup}>
+                            <div className={classes.inputTitle}>
+                                <Typography variant="h6">
+                                    School or University:
+                                </Typography>
+                            </div>
+                            <div className={classes.inputField}>
+                                <TextField variant="filled"  fullWidth>
+                                </TextField>
+                            </div>
                         </div>
 
-                        <div className={classes.inputTitle}>
-                            <Typography variant="h6">
-                                Re-Type Password:
-                            </Typography>
-                        </div>
-                        <div className={classes.inputField}>
-                            <TextField variant="filled" fullWidth>
-                            </TextField>
+                        <div className={classes.inputGroup}>
+                            <div className={classes.inputTitle}>
+                                <Typography variant="h6">
+                                    Email:
+                                </Typography>
+                            </div>
+                            <div className={classes.inputField}>
+                                <TextField variant="filled" fullWidth>
+                                </TextField>
+                            </div>
                         </div>
                     </div>
+
+                    <div className={classes.inputRow}>
+                        <div className={classes.inputGroup}>
+                            <div className={classes.inputTitle}>
+                                <Typography variant="h6">
+                                    Password:
+                                </Typography>
+                            </div>
+                            <div className={classes.inputField}>
+                                <TextField variant="filled" type="password" fullWidth>
+                                </TextField>
+                            </div>
+                        </div>
+
+                        <div className={classes.inputGroup}>
+                            <div className={classes.inputTitle}>
+                                <Typography variant="h6">
+                                    Re-Type Password:
+                                </Typography>
+                            </div>
+                            <div className={classes.inputField}>
+                                <TextField variant="filled" type="password" fullWidth>
+                                </TextField>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div className={classes.buttonDiv}>
                     <Link href="/home">

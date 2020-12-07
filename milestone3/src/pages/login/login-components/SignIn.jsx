@@ -87,7 +87,7 @@ const SignIn = (props) => {
             <Typography variant="h6">Password</Typography>
           </div>
           <div className={classes.inputFields}>
-            <TextField id="password" variant="filled" fullWidth></TextField>
+            <TextField id="password" type="password" variant="filled" fullWidth></TextField>
           </div>
           <div className={classes.inputFields}>
             <Typography variant="subtitle2" style={{ fontWeight: "bold" }}>

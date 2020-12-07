@@ -89,7 +89,7 @@ const ForgotPassword = (props) => {
                         </Typography>
                     </div>
                     <div className={classes.inputFields}>
-                        <TextField id="email" variant="filled" fullWidth>
+                        <TextField id="password" type="password" variant="filled" fullWidth>
                         </TextField>
                     </div>
                     <div className={classes.inputFields}>
@@ -98,7 +98,7 @@ const ForgotPassword = (props) => {
                         </Typography>
                     </div>
                     <div className={classes.inputFields}>
-                        <TextField id="password" variant="filled" fullWidth>
+                        <TextField id="Reenterpassword" type="password" variant="filled" fullWidth>
                         </TextField>
                     </div>
                     <div className={classes.buttonDiv}>
